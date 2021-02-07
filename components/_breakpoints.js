@@ -1,14 +1,14 @@
 const size = {
 	s: '576px',
 	md: '768px',
-	l: '992px',
+	lg: '992px',
 	xl: '1200px',
 	xxl: '1400px',
 };
 const Breakpoint = {
 	s: `(min-width: ${size.s})`,
-	m: `(min-width: ${size.m})`,
-	l: `(min-width: ${size.l})`,
+	md: `(min-width: ${size.md})`,
+	lg: `(min-width: ${size.lg})`,
 	xl: `(min-width: ${size.xl})`,
 	xxl: `(min-width: ${size.xxl})`,
 };

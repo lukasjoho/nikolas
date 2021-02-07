@@ -1,13 +1,19 @@
 import Layout from '../components/Layout';
 import GlobalStyle from '../components/GlobalStyle';
-import { AnimateSharedLayout } from 'framer-motion';
-function MyApp({ Component, pageProps }) {
+import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { ThemeProvider } from 'styled-components';
+import Theme from '../components/theme/theme';
+
+function MyApp({ Component, pageProps, router }) {
 	return (
 		<>
-			<GlobalStyle />
-			<AnimateSharedLayout type='crossfade'>
-				<Component {...pageProps} />
-			</AnimateSharedLayout>
+			<ThemeProvider theme={Theme}>
+				<GlobalStyle />
+				<AnimateSharedLayout type='crossfade'>
+					<Component {...pageProps} router={router.route} key={router.route} />
+				</AnimateSharedLayout>
+			</ThemeProvider>
 		</>
 	);
 }

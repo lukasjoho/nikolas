@@ -5,44 +5,50 @@ import { motion } from 'framer-motion';
 
 export const Container = styled.div`
 	max-width: 100%;
+	height: 100%;
 	margin: auto;
 	padding: 0 4rem;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	@media ${Breakpoint.md} {
-	}
+
 	@media ${Breakpoint.xxl} {
 		max-width: 1400px;
 	}
 `;
 export const Row = styled.div`
 	display: flex;
+	flex-direction: column;
 	flex-grow: 1;
-	margin-left: -4rem;
 	margin-right: -4rem;
-`;
-export const Col = styled.div`
-	width: 50%;
-	display: flex;
-	align-items: center;
-	padding: 0 4rem;
-`;
-export const Title = styled(motion.h1)`
-	font-size: 2.2rem;
-	color: #ff8563;
-	font-weight: 300;
-
-	@media ${Breakpoint.md} {
-		font-size: 2.2rem;
+	margin-left: -4rem;
+	height: 100%;
+	@media ${Breakpoint.lg} {
+		flex-direction: row;
+	}
+	> div:first-child {
 	}
 `;
-export const SuperTitle = styled(motion.h1)`
-	background-image: linear-gradient(180deg, #7c8284 0%, #d9ddde 50%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-size: 9rem;
+export const Col = styled.div`
+	flex-grow: 1;
+	height: 100%;
+
+	padding: 0 4rem;
+	@media ${Breakpoint.lg} {
+		width: 50%;
+	}
 `;
+
 export const Paragraph = styled.p`
 	line-height: 2;
+`;
+export const OverflowH = styled.div`
+	overflow: hidden;
+`;
+export const Hr = styled.hr`
+	background: linear-gradient(to right, transparent, #7c8284, transparent);
+	filter: drop-shadow(0px 0px 2px #7c8284);
+	height: 1px;
+	border: none;
+	transform: translateX(-50%);
+	margin: 2rem 0 3rem;
 `;

@@ -10,6 +10,7 @@ const StyledButton = styled(motion.button)`
 	box-shadow: 0px 0px 12px -5px #c7f1fd;
 	font-family: inherit;
 	font-size: inherit;
+	cursor: pointer;
 `;
 const spring = {
 	type: 'spring',
@@ -17,9 +18,9 @@ const spring = {
 	damping: 30,
 };
 
-const Button = ({ text, layoutId }) => {
+const Button = ({ text, layoutId, key }) => {
 	return (
-		<StyledButton layoutId={layoutId} transition={spring}>
+		<StyledButton key={key} layoutId={layoutId}>
 			{text}
 		</StyledButton>
 	);
