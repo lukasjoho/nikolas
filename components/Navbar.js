@@ -1,79 +1,78 @@
 import React, { useContext } from 'react';
 import { useRouter } from 'next/router';
 import Breakpoint from './_breakpoints';
-
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styled, { ThemeContext } from 'styled-components';
-import Socials from './Socials';
-
-const StyledNavbar = styled.nav`
-	display: flex;
-	height: 20rem;
-	align-items: center;
-`;
+import Highlighter from './highlighter';
 const Ul = styled.ul`
 	display: flex;
 	list-style-type: none;
-	width: 100%;
-	justify-content: flex-end;
-	align-items: center;
 	font-weight: 500;
+	width: 100%;
+	justify-content: space-around;
+	@media ${Breakpoint.lg} {
+		width: auto;
+		margin-right: -4rem;
+		justify-content: unset;
+	}
+`;
 
+const StyledNavItem = styled.li`
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	@media ${Breakpoint.lg} {
+		width: auto;
+	}
 	a {
 		text-decoration: none;
 		opacity: 0.5;
 		color: inherit;
 		transition: 0.3s ease;
+		position: relative;
+		@media ${Breakpoint.lg} {
+			width: auto;
+			padding: 1rem 4rem;
+		}
 		&:hover {
-			/* opacity: 1; */
 			color: ${(props) => props.theme.colors.silver};
 			opacity: 1;
-		}
-		li {
-			padding: 0 1rem;
-			@media ${Breakpoint.lg} {
-				padding: 0 4rem;
-			}
-		}
-	}
-	a:last-child {
-		li {
-			padding-right: 0rem;
 		}
 	}
 `;
 
 const Navbar = () => {
 	return (
-		<StyledNavbar>
-			<Socials />
-			<Ul>
-				<NavItem text='M' link='/' />
-				<NavItem text='Ix' link='/coinix' />
-				<NavItem text='Th' link='/thesis' />
-				<NavItem text='S' link='/stuff' />
-			</Ul>
-		</StyledNavbar>
+		<Ul>
+			<NavItem text='Me' link='/'></NavItem>
+			<NavItem text='CoinIx' link='/coinix'></NavItem>
+			<NavItem text='Thesis' link='/thesis' />
+			<NavItem text='Reading' link='/reading' />
+		</Ul>
 	);
 };
-const NavItem = ({ text, link }) => {
+const NavItem = ({ text, link, children }) => {
 	const router = useRouter();
 	const themeContext = useContext(ThemeContext);
 	return (
-		<Link href={link}>
-			<a
-				style={
-					router.pathname === link
-						? {
-								color: `${themeContext.colors.silver}`,
-								opacity: 1,
-						  }
-						: null
-				}
-			>
-				<li>{text}</li>
-			</a>
-		</Link>
+		<StyledNavItem>
+			<Link href={link}>
+				<a
+					style={
+						router.pathname === link
+							? {
+									color: `${themeContext.colors.silver}`,
+									opacity: 1,
+							  }
+							: null
+					}
+				>
+					{text}
+				</a>
+			</Link>
+		</StyledNavItem>
 	);
 };
 export default Navbar;

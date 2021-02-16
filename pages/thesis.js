@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import Overlap from '../components/Overlap';
 const ThesisPage = () => {
 	return (
 		<Layout
@@ -12,7 +13,9 @@ const ThesisPage = () => {
 				</>
 			}
 			textButton='Get an excerpt'
-		></Layout>
+		>
+			<Overlap />
+		</Layout>
 	);
 };
 export default ThesisPage;

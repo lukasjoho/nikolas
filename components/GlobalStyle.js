@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
+import Breakpoint from './_breakpoints';
+
 const GlobalStyle = createGlobalStyle`
 
 	html{
@@ -13,14 +15,24 @@ const GlobalStyle = createGlobalStyle`
 			margin: 0;
 			padding: 0;
 		}
+		
 		background: radial-gradient(100.94% 258.4% at 0% 100%, #0B2738 0%, #020817 59.71%);
 
+	
+
+
 		body{
-			font-size: 2rem;
+			padding-bottom: 8rem;
+			font-size: 1.8rem;
 			color: #9EAEB0;
+			@media ${Breakpoint.md} {
+					font-size: 2rem;
+
+	}
 
 			
 		}
+
 		
 	}
 	@font-face {

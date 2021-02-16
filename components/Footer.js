@@ -1,22 +1,25 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 import Navbar from './Navbar';
-import { Container } from './_utils';
+import Breakpoint from './_breakpoints';
+
 const StyledFooter = styled.footer`
 	height: 80px;
 	position: fixed;
 	left: 0;
 	width: 100%;
 	bottom: 0px;
-	background: red;
+	display: flex;
+	align-items: center;
+	backdrop-filter: blur(10px);
+	@media ${Breakpoint.lg} {
+		display: none;
+	}
 `;
 const Footer = () => {
 	return (
 		<StyledFooter>
-			<Container>
-				<Navbar />
-			</Container>
+			<Navbar />
 		</StyledFooter>
 	);
 };

@@ -6,7 +6,7 @@ import Breakpoint from './_breakpoints';
 const StyledTitle = styled(motion.h1)`
 	font-size: 2.2rem;
 	color: #ff8563;
-	font-weight: 200;
+	font-weight: 100;
 	margin-bottom: 1.2rem;
 
 	@media ${Breakpoint.md} {
