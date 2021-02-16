@@ -3,6 +3,32 @@ import Layout from '../../components/Layout';
 import React from 'react';
 import fs from 'fs';
 import { bookList } from './bookList';
+export const getStaticProps = async ({ params: { slug } }) => {
+	return {
+		props: {
+			slug,
+			bookList,
+		},
+	};
+};
+export const getStaticPaths = async () => {
+	const files = fs.readdirSync('pages/books');
+	// const paths = files.map((filename) => ({
+	// 	params: {
+	// 		slug: filename.replace('.md', ''),
+	// 	},
+	// }));
+	const paths = bookList.map((book) => ({
+		params: {
+			slug: book.slug.toString(),
+		},
+	}));
+	console.log('Paths: ', paths);
+	return {
+		paths,
+		fallback: false,
+	};
+};
 const Book = ({ slug }) => {
 	return (
 		<Layout
@@ -22,30 +48,4 @@ const Book = ({ slug }) => {
 	);
 };
 
-export const getStaticPaths = async () => {
-	const files = fs.readdirSync('pages/books');
-	// const paths = files.map((filename) => ({
-	// 	params: {
-	// 		slug: filename.replace('.md', ''),
-	// 	},
-	// }));
-	const paths = bookList.map((book) => ({
-		params: {
-			slug: book.slug.toString(),
-		},
-	}));
-	console.log('Paths: ', paths);
-	return {
-		paths,
-		fallback: false,
-	};
-};
-export const getStaticProps = async ({ params: { slug } }) => {
-	return {
-		props: {
-			slug,
-			bookList,
-		},
-	};
-};
 export default Book;
