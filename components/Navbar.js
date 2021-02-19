@@ -49,7 +49,7 @@ const Navbar = () => {
 			<NavItem text='Me' link='/'></NavItem>
 			<NavItem text='CoinIx' link='/coinix'></NavItem>
 			<NavItem text='Thesis' link='/thesis' />
-			<NavItem text='Reading' link='/reading' />
+			<NavItem text='Reading' link='/reading/books' />
 		</Ul>
 	);
 };

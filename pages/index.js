@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import CircleAnimation from '../components/CircleAnimation';
 import Layout from '../components/Layout';
 const Home = () => {
 	return (
@@ -14,7 +15,7 @@ const Home = () => {
 			}
 			textButton='Hit Me Up'
 		>
-			asd
+			<CircleAnimation />
 		</Layout>
 	);
 };

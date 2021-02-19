@@ -10,7 +10,16 @@ const StyledSuperTitle = styled(motion.h1)`
 	font-size: 4.5rem;
 	line-height: 1;
 	padding-bottom: 1rem;
+	@media ${Breakpoint.md} {
+		font-size: 6rem;
+	}
 	@media ${Breakpoint.lg} {
+		font-size: 7rem;
+	}
+	@media ${Breakpoint.xl} {
+		font-size: 8rem;
+	}
+	@media ${Breakpoint.xxl} {
 		font-size: 9rem;
 	}
 `;

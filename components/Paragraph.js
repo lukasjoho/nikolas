@@ -7,10 +7,12 @@ const StyledParagraph = styled(motion.p)`
 	line-height: 2.2;
 	margin-bottom: 4rem;
 	font-weight: 300;
-	max-height: 300px;
 	overflow: scroll;
+	text-align: justify;
+	max-height: 30rem;
 	@media ${Breakpoint.md} {
 		margin-bottom: 6rem;
+		padding-right: 8rem;
 	}
 `;
 

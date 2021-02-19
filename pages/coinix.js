@@ -1,6 +1,12 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
-const ThesisPage = () => {
+import styled from 'styled-components';
+
+const Animation = styled.div`
+	iframe {
+		transform: scale(0.5);
+	}
+`;
+const CoinIxPage = () => {
 	return (
 		<Layout
 			title='Cryptocurrency Fund'
@@ -21,7 +27,16 @@ const ThesisPage = () => {
 				</>
 			}
 			textButton="Let's talk crypto"
-		></Layout>
+		>
+			<Animation>
+				<iframe
+					src='https://my.spline.design/coinix-bf32fc4f5e08a32fcadab4d2f334188e/'
+					frameborder='0'
+					width='300px'
+					height='300px'
+				></iframe>
+			</Animation>
+		</Layout>
 	);
 };
-export default ThesisPage;
+export default CoinIxPage;

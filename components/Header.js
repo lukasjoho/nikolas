@@ -7,7 +7,7 @@ import Navbar from './navbar';
 
 const StyledHeader = styled.nav`
 	display: flex;
-	height: 12rem;
+	height: 8rem;
 	align-items: center;
 	justify-content: flex-end;
 	> *:last-child {

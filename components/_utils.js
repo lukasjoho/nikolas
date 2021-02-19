@@ -10,9 +10,11 @@ export const Container = styled.div`
 	padding: 0 4rem;
 	display: flex;
 	flex-direction: column;
-
+	@media ${Breakpoint.xl} {
+		max-width: 1100px;
+	}
 	@media ${Breakpoint.xxl} {
-		max-width: 1400px;
+		max-width: 1250px;
 	}
 `;
 export const Row = styled.div`
@@ -24,14 +26,13 @@ export const Row = styled.div`
 	height: 100%;
 	@media ${Breakpoint.lg} {
 		flex-direction: row;
+		align-items: stretch;
 	}
 	> div:first-child {
 	}
 `;
 export const Col = styled.div`
 	flex-grow: 1;
-	height: 100%;
-
 	padding: 0 4rem;
 	@media ${Breakpoint.lg} {
 		width: 50%;

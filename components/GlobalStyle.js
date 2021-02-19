@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
 			padding-bottom: 8rem;
 			font-size: 1.8rem;
 			color: #9EAEB0;
+
 			@media ${Breakpoint.md} {
 					font-size: 2rem;
 
