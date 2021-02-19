@@ -19,14 +19,17 @@ const GlobalStyle = createGlobalStyle`
 		background: radial-gradient(100.94% 258.4% at 0% 100%, #0B2738 0%, #020817 59.71%);
 
 	
+			overflow-x: hidden;
 
 
 		body{
 			padding-bottom: 8rem;
 			font-size: 1.8rem;
-			color: #9EAEB0;
-
+			color: #9EAEB0;	
+			overflow-x: hidden;
 			@media ${Breakpoint.md} {
+			overflow-x: unset;
+
 					font-size: 2rem;
 
 	}

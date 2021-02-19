@@ -1,25 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import Breakpoint from './_breakpoints';
+
 const Wrapper = styled.div`
+	margin-top: 6rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	position: relative;
+	@media ${Breakpoint.md} {
+		overflow-x: unset;
+
+		margin-top: 0rem;
+		font-size: 2rem;
+	}
+`;
+const CircleWrapper = styled.div`
+	width: 100%;
+	padding-top: 100%;
+	position: absolute;
+	top: 0;
 `;
 const CircleContainer = styled.div`
 	position: absolute;
+	left: 0;
+	top: 0;
 	display: inline-flex;
-	width: ${(props) => `${props.size}px`};
+	width: ${(props) => `100%`};
 
-	height: ${(props) => `${props.size}px`};
+	height: ${(props) => `100%`};
 	justify-content: center;
 	align-items: center;
 	align-self: flex-start;
 	z-index: 1;
-	margin-top: -10%;
 	overflow: hidden;
 `;
 const StyledCircle = styled.div`
@@ -31,22 +47,16 @@ const StyledCircle = styled.div`
 			transform: rotate(360deg);
 		}
 	}
-	@keyframes rotationreverse {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(-360deg);
-		}
-	}
+
 	position: absolute;
 	opacity: ${(props) => props.opacity};
-	width: ${(props) => `${props.circle}px`};
-	height: ${(props) => `${props.circle}px`};
+	width: ${(props) => `calc(${props.size}% - ${props.icon}px)`};
+	height: ${(props) => `calc(${props.size}% - ${props.icon}px)`};
 	border: 1px solid rgba(200, 200, 200, 1);
 	border-radius: 50%;
 	transform: rotate(0deg);
-	animation: rotationreverse ${(props) => `${props.duration}s`} infinite linear;
+	animation: rotation ${(props) => `${props.duration}s`} linear
+		${(props) => `${-1 * props.delay}s`} infinite reverse;
 
 	div {
 		position: absolute;
@@ -54,27 +64,26 @@ const StyledCircle = styled.div`
 		height: ${(props) => `${props.icon}px`};
 		transform: rotate(0deg);
 
-		animation: rotation ${(props) => `${props.duration}s`} infinite linear;
+		animation: rotation ${(props) => `${props.duration}s`} linear
+			${(props) => `${-1 * props.delay}s`} infinite;
 		img {
 			width: 100%;
 		}
 		&:nth-child(1) {
-			top: ${(props) => `${(-1 * props.icon) / 2}px`}; /* -child size/2 */
-			left: ${(props) => `${(props.circle - props.icon) / 2}px`};
+			top: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+			left: ${(props) => `calc(0% - ${props.icon / 2}px)`};
 		}
 		&:nth-child(2) {
-			bottom: ${(props) => `${(-1 * props.icon) / 2}px`}; /* -child size/2 */
-			left: ${(props) => `${(props.circle - props.icon) / 2}px`};
+			bottom: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+			left: ${(props) => `calc(50% - ${props.icon / 2}px)`};
 		}
 		&:nth-child(3) {
-			top: ${(props) =>
-				`${(props.circle - props.icon) / 2}px`}; /* -child size/2 */
-			left: ${(props) => `${(-1 * props.icon) / 2}px`};
+			top: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+			right: ${(props) => `calc(0% - ${props.icon / 2}px)`};
 		}
 		&:nth-child(4) {
-			top: ${(props) =>
-				`${(props.circle - props.icon) / 2}px`}; /* -child size/2 */
-			right: ${(props) => `${(-1 * props.icon) / 2}px`};
+			top: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+			left: ${(props) => `calc(50% - ${props.icon / 2}px)`};
 		}
 	}
 `;
@@ -96,9 +105,9 @@ const Image = styled.div`
 `;
 const Line = styled.div`
 	position: absolute;
-	height: 200px;
+	height: 150px;
 	width: 150%;
-	bottom: -200px;
+	bottom: -150px;
 	z-index: 3;
 	backdrop-filter: blur(10px);
 	.hr {
@@ -127,43 +136,56 @@ const Line = styled.div`
 	}
 `;
 const CircleAnimation = () => {
-	const circleL = 700;
-
-	const circleS = 500;
-	const iconL = 40;
-	const iconS = 40;
 	return (
 		<Wrapper>
-			<CircleContainer size={circleL + iconL}>
-				<StyledCircle circle={circleL} icon={iconL} duration={60} opacity={0.1}>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-				</StyledCircle>
-				<StyledCircle circle={circleS} icon={iconS} duration={40} opacity={0.2}>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-					<div>
-						<img src='image-coinix.png' alt='' />
-					</div>
-				</StyledCircle>
-			</CircleContainer>
+			<CircleWrapper>
+				<CircleContainer>
+					<StyledCircle
+						size={100}
+						icon={20}
+						opacity={0.2}
+						duration={40}
+						delay={6}
+					>
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+					</StyledCircle>
+					<StyledCircle
+						size={80}
+						icon={30}
+						opacity={0.2}
+						duration={20}
+						delay={0}
+					>
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+
+						<div>
+							<img src='image-coinix.png' alt='' />
+						</div>
+					</StyledCircle>
+				</CircleContainer>
+			</CircleWrapper>
 			<Image>
 				<img src='image-niko.png' alt='' />
 				{/* <Hr>

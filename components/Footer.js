@@ -11,7 +11,10 @@ const StyledFooter = styled.footer`
 	bottom: 0px;
 	display: flex;
 	align-items: center;
+	background: rgba(2, 8, 23, 0.6);
 	backdrop-filter: blur(10px);
+	z-index: 999;
+	box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.6);
 	@media ${Breakpoint.lg} {
 		display: none;
 	}
