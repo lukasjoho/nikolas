@@ -49,11 +49,11 @@ const Navbar = () => {
 			<NavItem text='Me' link='/'></NavItem>
 			<NavItem text='CoinIx' link='/coinix'></NavItem>
 			<NavItem text='Thesis' link='/thesis' />
-			<NavItem text='Reading' link='/reading/books' />
+			<NavItem text='Reading' link='/reading/books' linkAlt='/reading/crypto' />
 		</Ul>
 	);
 };
-const NavItem = ({ text, link, children }) => {
+const NavItem = ({ text, link, linkAlt, children }) => {
 	const router = useRouter();
 	const themeContext = useContext(ThemeContext);
 	return (
@@ -61,7 +61,7 @@ const NavItem = ({ text, link, children }) => {
 			<Link href={link}>
 				<a
 					style={
-						router.pathname === link
+						router.pathname === link || router.pathname === linkAlt
 							? {
 									color: `${themeContext.colors.silver}`,
 									opacity: 1,
