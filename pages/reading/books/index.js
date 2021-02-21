@@ -81,7 +81,7 @@ const ReadingPage = ({ books }) => {
 					crypto
 				</>
 			}
-			textButton="Let's talk about words"
+			textButton='Pick A Book'
 		>
 			<Toggle />
 			<Ul>{list}</Ul>

@@ -105,6 +105,7 @@ const CryptoPage = ({ cryptos }) => {
 				</>
 			}
 			textButton="Let's talk crypto"
+			external='https://www.linkedin.com/in/nikolas-schoneweg-bb12b8166/'
 		>
 			<Toggle />
 

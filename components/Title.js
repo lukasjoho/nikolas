@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 import Breakpoint from './_breakpoints';
 
 const StyledTitle = styled(motion.h1)`
-	font-size: 2rem;
+	font-size: 1.8rem;
 	color: #ff8563;
 	font-weight: 100;
 	margin-bottom: 1.2rem;
 
 	@media ${Breakpoint.md} {
-		font-size: 2.2rem;
+		font-size: 2rem;
 	}
 	@media ${Breakpoint.md} {
-		font-size: 2.5rem;
+		font-size: 2.2rem;
 	}
 `;
 

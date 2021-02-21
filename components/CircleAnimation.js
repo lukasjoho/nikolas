@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Breakpoint from './_breakpoints';
 
 const Wrapper = styled.div`
-	margin-top: 3rem;
+	margin-top: 6rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -19,10 +19,19 @@ const Wrapper = styled.div`
 	}
 `;
 const CircleWrapper = styled.div`
-	width: 100%;
-	padding-top: 100%;
+	width: 110%;
+	padding-top: 110%;
 	position: absolute;
-	top: 0;
+	top: -20%;
+	@media ${Breakpoint.lg} {
+		top: -10%;
+
+		width: 120%;
+		padding-top: 120%;
+	}
+	@media ${Breakpoint.xl} {
+		top: -20%;
+	}
 `;
 const CircleContainer = styled.div`
 	position: absolute;
@@ -57,7 +66,8 @@ const StyledCircle = styled.div`
 	transform: rotate(0deg);
 	animation: rotation ${(props) => `${props.duration}s`} linear
 		${(props) => `${-1 * props.delay}s`} infinite reverse;
-
+	@media ${Breakpoint.lg} {
+	}
 	div {
 		position: absolute;
 		width: ${(props) => `${props.icon}px`};
@@ -66,6 +76,8 @@ const StyledCircle = styled.div`
 
 		animation: rotation ${(props) => `${props.duration}s`} linear
 			${(props) => `${-1 * props.delay}s`} infinite;
+		border-radius: 5px;
+		overflow: hidden;
 		img {
 			width: 100%;
 		}
@@ -146,29 +158,29 @@ const CircleAnimation = () => {
 				<CircleContainer>
 					<StyledCircle
 						size={100}
-						icon={20}
+						icon={40}
 						opacity={0.3}
 						duration={40}
 						delay={6}
 					>
 						<div>
-							<img src='image-coinix.png' alt='' />
+							<img src='icon-medium-circle.svg' alt='' />
 						</div>
 						<div>
-							<img src='image-coinix.png' alt='' />
-						</div>
-
-						<div>
-							<img src='image-coinix.png' alt='' />
+							<img src='icon-wwu.svg' alt='' />
 						</div>
 
 						<div>
-							<img src='image-coinix.png' alt='' />
+							<img src='icon-polkadot.svg' alt='' />
+						</div>
+
+						<div>
+							<img src='icon-ethereum.svg' alt='' />
 						</div>
 					</StyledCircle>
 					<StyledCircle
-						size={80}
-						icon={30}
+						size={70}
+						icon={50}
 						opacity={0.4}
 						duration={20}
 						delay={0}
@@ -177,15 +189,15 @@ const CircleAnimation = () => {
 							<img src='image-coinix.png' alt='' />
 						</div>
 						<div>
-							<img src='image-coinix.png' alt='' />
+							<img src='icon-lien.png' alt='' />
 						</div>
 
 						<div>
-							<img src='image-coinix.png' alt='' />
+							<img src='icon-thesis.svg' alt='' />
 						</div>
 
 						<div>
-							<img src='image-coinix.png' alt='' />
+							<img src='image-bnf.png' alt='' />
 						</div>
 					</StyledCircle>
 				</CircleContainer>

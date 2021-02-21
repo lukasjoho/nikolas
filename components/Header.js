@@ -14,7 +14,7 @@ const StyledHeader = styled.nav`
 		display: none;
 	}
 	@media ${Breakpoint.lg} {
-		height: 20rem;
+		height: 16rem;
 		justify-content: space-between;
 		margin-bottom: 6rem;
 		> *:last-child {

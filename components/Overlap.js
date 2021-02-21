@@ -189,7 +189,7 @@ const Overlap = () => {
 	return (
 		<StyledCard>
 			<Quote
-				initial={{ opacity: 0, scale: 0.9, y: 0 }}
+				initial={{ opacity: 0, scale: 0.7, y: 0 }}
 				animate={{ opacity: 1, scale: 1, y: 0 }}
 				transition={{ duration: 0.4, delay: 0.1 }}
 			>
@@ -201,7 +201,7 @@ const Overlap = () => {
 			</Quote>
 			<ChartContainer>
 				<Metric
-					initial={{ opacity: 0, scale: 0.9, y: 0 }}
+					initial={{ opacity: 0, scale: 0.7, y: 0 }}
 					animate={{ opacity: 1, scale: 1, y: 0 }}
 					transition={{ duration: 0.4, delay: 0.2 }}
 				>
@@ -215,7 +215,7 @@ const Overlap = () => {
 					</p>
 				</Metric>
 				<Image
-					initial={{ opacity: 0, scale: 0.9, y: 0 }}
+					initial={{ opacity: 0, scale: 0.7, y: 0 }}
 					animate={{ opacity: 1, scale: 1, y: 0 }}
 					transition={{ duration: 0.4, delay: 0.4 }}
 				>
@@ -264,7 +264,7 @@ const Overlap = () => {
 				/>
 			</ChartContainer>
 			<Topic
-				initial={{ opacity: 0, scale: 0.9, y: 0 }}
+				initial={{ opacity: 0, scale: 0.7, y: 0 }}
 				animate={{ opacity: 1, scale: 1, y: 0 }}
 				transition={{ duration: 0.4, delay: 0.3 }}
 			>

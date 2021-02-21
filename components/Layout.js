@@ -21,6 +21,7 @@ const Layout = ({
 	children,
 	key,
 	link,
+	external,
 }) => {
 	const router = useRouter();
 
@@ -44,13 +45,14 @@ const Layout = ({
 								key={key}
 								className='desktop'
 								link={link}
+								external={external}
 							/>
 							{/* <Highlighter layoutId='highlighter' text={router.pathname} /> */}
 						</div>
 					</Col>
 					<Col>
 						{children}
-						<Button text={textButton} mobile link={link} />
+						<Button text={textButton} mobile link={link} external={external} />
 					</Col>
 				</Row>
 

@@ -15,6 +15,7 @@ const Home = () => {
 				</>
 			}
 			textButton='Hit Me Up'
+			external='https://www.linkedin.com/in/nikolas-schoneweg-bb12b8166/'
 		>
 			<CircleAnimation />
 		</Layout>

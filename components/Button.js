@@ -40,7 +40,7 @@ const spring = {
 	damping: 30,
 };
 
-const Button = ({ text, layoutId, key, mobile, link }) => {
+const Button = ({ text, layoutId, key, mobile, link, external }) => {
 	return (
 		<>
 			{link ? (
@@ -55,6 +55,16 @@ const Button = ({ text, layoutId, key, mobile, link }) => {
 						</StyledButton>
 					</a>
 				</Link>
+			) : external ? (
+				<a href={external} target='_blank'>
+					<StyledButton
+						key={key}
+						layoutId={layoutId}
+						className={mobile ? 'full' : 'desktop'}
+					>
+						{text}
+					</StyledButton>
+				</a>
 			) : (
 				<StyledButton
 					key={key}

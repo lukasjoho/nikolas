@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import Breakpoint from '../components/_breakpoints';
-import Button from '../components/Button';
+
 const Animation = styled.div`
 	height: 100%;
 	display: flex;
@@ -28,6 +28,7 @@ const Animation = styled.div`
 		}
 	}
 `;
+
 const CoinIxPage = () => {
 	return (
 		<Layout
@@ -49,6 +50,7 @@ const CoinIxPage = () => {
 				</>
 			}
 			textButton='Visit CoinIx'
+			external='https://coinix.capital/'
 		>
 			<Animation>
 				<div>
@@ -60,7 +62,6 @@ const CoinIxPage = () => {
 					></iframe>
 				</div>
 			</Animation>
-			{/* <Button text='Visit CoinIx' mobile /> */}
 		</Layout>
 	);
 };

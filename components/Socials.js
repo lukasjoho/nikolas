@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import Link from 'next/link';
 import styled, { ThemeContext } from 'styled-components';
+import Breakpoint from './_breakpoints';
 
 import { FaLinkedin, FaMedium } from 'react-icons/fa';
 import { IoDocumentText } from 'react-icons/io5';
@@ -17,8 +18,16 @@ const Ul = styled.ul`
 		transition: 0.3s ease;
 		font-size: 2.2rem;
 		padding: 0 1rem;
+
 		&:first-child {
 			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0rem;
+
+			@media ${Breakpoint.lg} {
+				padding: 0 1rem;
+			}
 		}
 		&:hover {
 			color: ${(props) => props.theme.colors.silver};
