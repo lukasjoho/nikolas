@@ -1,9 +1,21 @@
+import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 
 const Animation = styled.div`
-	iframe {
-		transform: scale(0.5);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	> div {
+		width: 300px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		transform: scale(2);
+		iframe {
+			transform: scale(1);
+		}
 	}
 `;
 const CoinIxPage = () => {
@@ -26,15 +38,17 @@ const CoinIxPage = () => {
 					opportunity
 				</>
 			}
-			textButton="Let's talk crypto"
+			textButton='Visit CoinIx'
 		>
 			<Animation>
-				<iframe
-					src='https://my.spline.design/coinix-bf32fc4f5e08a32fcadab4d2f334188e/'
-					frameborder='0'
-					width='300px'
-					height='300px'
-				></iframe>
+				<div>
+					<iframe
+						src='https://my.spline.design/coinixcopycopy-fb636eee2006a3f5f35949c92371eccb/'
+						frameborder='0'
+						width='100%'
+						height='300px'
+					></iframe>
+				</div>
 			</Animation>
 		</Layout>
 	);
