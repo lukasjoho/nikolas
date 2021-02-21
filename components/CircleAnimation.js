@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Breakpoint from './_breakpoints';
+import Image from 'next/image';
 
 const Wrapper = styled.div`
 	margin-top: 6rem;
@@ -19,10 +20,16 @@ const Wrapper = styled.div`
 	}
 `;
 const CircleWrapper = styled.div`
-	width: 110%;
-	padding-top: 110%;
+	width: 120%;
+	padding-top: 120%;
 	position: absolute;
 	top: -20%;
+	@media ${Breakpoint.s} {
+		top: -10%;
+
+		width: 110%;
+		padding-top: 110%;
+	}
 	@media ${Breakpoint.lg} {
 		top: -10%;
 
@@ -66,41 +73,62 @@ const StyledCircle = styled.div`
 	transform: rotate(0deg);
 	animation: rotation ${(props) => `${props.duration}s`} linear
 		${(props) => `${-1 * props.delay}s`} infinite reverse;
-	@media ${Breakpoint.lg} {
-	}
+
 	div {
 		position: absolute;
-		width: ${(props) => `${props.icon}px`};
-		height: ${(props) => `${props.icon}px`};
+		width: ${(props) => `${props.icon / 1.5}px`};
+		height: ${(props) => `${props.icon / 1.5}px`};
 		transform: rotate(0deg);
 
 		animation: rotation ${(props) => `${props.duration}s`} linear
 			${(props) => `${-1 * props.delay}s`} infinite;
 		border-radius: 5px;
 		overflow: hidden;
+		@media ${Breakpoint.lg} {
+			width: ${(props) => `${props.icon}px`};
+			height: ${(props) => `${props.icon}px`};
+		}
 		img {
 			width: 100%;
 		}
 		&:nth-child(1) {
-			top: ${(props) => `calc(50% - ${props.icon / 2}px)`};
-			left: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+			top: ${(props) => `calc(50% - ${props.icon / 1.5 / 2}px)`};
+			left: ${(props) => `calc(0% - ${props.icon / 1.5 / 2}px)`};
 		}
 		&:nth-child(2) {
-			bottom: ${(props) => `calc(0% - ${props.icon / 2}px)`};
-			left: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+			bottom: ${(props) => `calc(0% - ${props.icon / 1.5 / 2}px)`};
+			left: ${(props) => `calc(50% - ${props.icon / 1.5 / 2}px)`};
 		}
 		&:nth-child(3) {
-			top: ${(props) => `calc(50% - ${props.icon / 2}px)`};
-			right: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+			top: ${(props) => `calc(50% - ${props.icon / 1.5 / 2}px)`};
+			right: ${(props) => `calc(0% - ${props.icon / 1.5 / 2}px)`};
 		}
 		&:nth-child(4) {
-			top: ${(props) => `calc(0% - ${props.icon / 2}px)`};
-			left: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+			top: ${(props) => `calc(0% - ${props.icon / 1.5 / 2}px)`};
+			left: ${(props) => `calc(50% - ${props.icon / 1.5 / 2}px)`};
+		}
+		@media ${Breakpoint.lg} {
+			&:nth-child(1) {
+				top: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+				left: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+			}
+			&:nth-child(2) {
+				bottom: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+				left: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+			}
+			&:nth-child(3) {
+				top: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+				right: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+			}
+			&:nth-child(4) {
+				top: ${(props) => `calc(0% - ${props.icon / 2}px)`};
+				left: ${(props) => `calc(50% - ${props.icon / 2}px)`};
+			}
 		}
 	}
 `;
 
-const Image = styled(motion.div)`
+const StyledImage = styled(motion.div)`
 	width: 100%;
 	font-size: 0;
 	display: flex;
@@ -203,7 +231,7 @@ const CircleAnimation = () => {
 				</CircleContainer>
 			</CircleWrapper>
 			<NoOverflow>
-				<Image
+				<StyledImage
 					initial={{ opacity: 1, y: 50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ ease: 'easeOut', duration: 2 }}
@@ -212,7 +240,7 @@ const CircleAnimation = () => {
 					{/* <Hr>
 					<hr />
 				</Hr> */}
-				</Image>
+				</StyledImage>
 			</NoOverflow>
 			<Line>
 				<div className='hr'></div>
