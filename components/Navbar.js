@@ -4,7 +4,6 @@ import Breakpoint from './_breakpoints';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styled, { ThemeContext } from 'styled-components';
-import Highlighter from './highlighter';
 const Ul = styled.ul`
 	display: flex;
 	list-style-type: none;
