@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Breakpoint from './_breakpoints';
-import Image from 'next/image';
 
 const Wrapper = styled.div`
 	margin-top: 6rem;
