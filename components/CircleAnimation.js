@@ -235,7 +235,7 @@ const CircleAnimation = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ ease: 'easeOut', duration: 2 }}
 				>
-					<img src='image-niko.png' alt='' />
+					<img src='image-niko-min.png' alt='' />
 					{/* <Hr>
 					<hr />
 				</Hr> */}
