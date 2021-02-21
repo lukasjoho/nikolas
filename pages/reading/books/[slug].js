@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import React from 'react';
-import { bookList } from './bookList';
+import { bookList } from '../../../data/bookList';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import Breakpoint from '../../../components/_breakpoints';

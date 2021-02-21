@@ -2,7 +2,7 @@ import Layout from '../../../components/Layout';
 import Toggle from '../../../components/Toggle';
 import styled from 'styled-components';
 
-import { cryptoList } from './cryptoList';
+import { cryptoList } from '../../../data/cryptoList';
 import Breakpoint from '../../../components/_breakpoints';
 import { motion } from 'framer-motion';
 import { FaLink } from 'react-icons/fa';

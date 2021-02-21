@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Layout from '../../../components/Layout';
 import Toggle from '../../../components/Toggle';
 import Link from 'next/link';
-import { bookList } from './bookList';
+import { bookList } from '../../../data/bookList';
 import Breakpoint from '../../../components/_breakpoints';
 
 export const getStaticProps = async ({ params }) => {
