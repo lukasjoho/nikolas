@@ -2,16 +2,13 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Button from '../components/Button';
-import Highlighter from '../components/Highlighter';
 
 import Paragraph from '../components/Paragraph';
 import SuperTitle from '../components/SuperTitle';
 import Title from '../components/Title';
-import Breakpoint from './_breakpoints';
 import { useRouter } from 'next/router';
 
 import { Container, Row, Col, OverflowH, Hr } from '../components/_utils';
-import Cursor from './Cursor';
 
 const Layout = ({
 	title,
@@ -47,7 +44,6 @@ const Layout = ({
 								link={link}
 								external={external}
 							/>
-							{/* <Highlighter layoutId='highlighter' text={router.pathname} /> */}
 						</div>
 					</Col>
 					<Col>
