@@ -8,8 +8,11 @@ const ThesisPage = () => {
 			superTitle='Disruption'
 			text={
 				<>
-					Cryptocurrencies as a Disruptive Innovation. A qualitative analysis of
-					bitcoin, stable coins and the DeFi movement.
+					In my thesis I investigated wether or not cryptocurrencies might be a
+					Disruptive Innovation. I developed an extensive framework that can
+					identify disruptive characteristics and applied it to several
+					cryptocurrencies. The results of this thesis let me to starting my
+					career in the space.
 				</>
 			}
 			textButton='Get an excerpt'

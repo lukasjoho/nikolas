@@ -16,10 +16,13 @@ const StyledHeader = styled.nav`
 	@media ${Breakpoint.lg} {
 		height: 20rem;
 		justify-content: space-between;
-
+		margin-bottom: 6rem;
 		> *:last-child {
 			display: flex;
 		}
+	}
+	@media ${Breakpoint.xxl} {
+		height: 20rem;
 	}
 `;
 

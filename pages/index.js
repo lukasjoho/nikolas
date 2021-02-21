@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import CircleAnimation from '../components/CircleAnimation';
 import Layout from '../components/Layout';
+import Button from '../components/Button';
 const Home = () => {
 	return (
 		<Layout

@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 import Breakpoint from './_breakpoints';
 
 const Wrapper = styled.div`
-	margin-top: 6rem;
+	margin-top: 3rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	position: relative;
-	@media ${Breakpoint.md} {
+	@media ${Breakpoint.lg} {
 		overflow-x: unset;
 
 		margin-top: 0rem;
@@ -88,7 +88,7 @@ const StyledCircle = styled.div`
 	}
 `;
 
-const Image = styled.div`
+const Image = styled(motion.div)`
 	width: 100%;
 	font-size: 0;
 	display: flex;
@@ -101,7 +101,11 @@ const Image = styled.div`
 		width: 80%;
 		bottom: 0px;
 		margin: auto;
+		filter: brightness(85%);
 	}
+`;
+const NoOverflow = styled.div`
+	overflow: hidden;
 `;
 const Line = styled.div`
 	position: absolute;
@@ -132,7 +136,7 @@ const Line = styled.div`
 		left: 50%;
 		transform: translateX(-50%);
 		top: -100px;
-		box-shadow: 0px 40px 30px -40px #c7f1fd50;
+		box-shadow: 0px 50px 40px -40px #c7f1fd75;
 	}
 `;
 const CircleAnimation = () => {
@@ -143,7 +147,7 @@ const CircleAnimation = () => {
 					<StyledCircle
 						size={100}
 						icon={20}
-						opacity={0.2}
+						opacity={0.3}
 						duration={40}
 						delay={6}
 					>
@@ -165,7 +169,7 @@ const CircleAnimation = () => {
 					<StyledCircle
 						size={80}
 						icon={30}
-						opacity={0.2}
+						opacity={0.4}
 						duration={20}
 						delay={0}
 					>
@@ -186,12 +190,18 @@ const CircleAnimation = () => {
 					</StyledCircle>
 				</CircleContainer>
 			</CircleWrapper>
-			<Image>
-				<img src='image-niko.png' alt='' />
-				{/* <Hr>
+			<NoOverflow>
+				<Image
+					initial={{ opacity: 1, y: 50 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ ease: 'easeOut', duration: 2 }}
+				>
+					<img src='image-niko.png' alt='' />
+					{/* <Hr>
 					<hr />
 				</Hr> */}
-			</Image>
+				</Image>
+			</NoOverflow>
 			<Line>
 				<div className='hr'></div>
 				<div className='shadow'></div>

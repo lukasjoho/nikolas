@@ -11,8 +11,17 @@ import Breakpoint from './_breakpoints';
 import { useRouter } from 'next/router';
 
 import { Container, Row, Col, OverflowH, Hr } from '../components/_utils';
+import Cursor from './Cursor';
 
-const Layout = ({ title, superTitle, text, textButton, children, key }) => {
+const Layout = ({
+	title,
+	superTitle,
+	text,
+	textButton,
+	children,
+	key,
+	link,
+}) => {
 	const router = useRouter();
 
 	return (
@@ -29,11 +38,20 @@ const Layout = ({ title, superTitle, text, textButton, children, key }) => {
 								<Paragraph>{text}</Paragraph>
 							</OverflowH>
 
-							<Button layoutId='button' text={textButton} key={key}></Button>
+							<Button
+								layoutId='button'
+								text={textButton}
+								key={key}
+								className='desktop'
+								link={link}
+							/>
 							{/* <Highlighter layoutId='highlighter' text={router.pathname} /> */}
 						</div>
 					</Col>
-					<Col>{children}</Col>
+					<Col>
+						{children}
+						<Button text={textButton} mobile link={link} />
+					</Col>
 				</Row>
 
 				<Footer />

@@ -1,18 +1,28 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
-
+import Breakpoint from '../components/_breakpoints';
+import Button from '../components/Button';
 const Animation = styled.div`
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+	@media ${Breakpoint.lg} {
+		margin-top: unset;
+		margin-bottom: unset;
+	}
 	> div {
 		width: 300px;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
-		transform: scale(2);
+		transform: scale(1.5);
+		@media ${Breakpoint.md} {
+			transform: scale(2);
+		}
 		iframe {
 			transform: scale(1);
 		}
@@ -50,6 +60,7 @@ const CoinIxPage = () => {
 					></iframe>
 				</div>
 			</Animation>
+			{/* <Button text='Visit CoinIx' mobile /> */}
 		</Layout>
 	);
 };

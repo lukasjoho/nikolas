@@ -47,6 +47,7 @@ const Book = ({ book }) => {
 			superTitle={book.title}
 			text={book.text}
 			textButton='Back To All'
+			link='/reading/books'
 		>
 			<Container>
 				<motion.img layoutId={book.slug} src={book.image} alt='' />

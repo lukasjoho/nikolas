@@ -53,7 +53,10 @@ const Ul = styled.ul`
 		}
 	}
 `;
-
+const item = {
+	hidden: { opacity: 0, y: -100 },
+	show: { opacity: 1, y: 0 },
+};
 const ReadingPage = ({ books }) => {
 	const list = books.map((book) => (
 		<Link href={`books/${book.slug}`}>

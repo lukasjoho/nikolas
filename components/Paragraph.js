@@ -5,12 +5,10 @@ import Breakpoint from './_breakpoints';
 
 const StyledParagraph = styled(motion.p)`
 	line-height: 2.2;
-	margin-bottom: 4rem;
 	font-weight: 300;
 	overflow: scroll;
 	text-align: justify;
-	max-height: 30rem;
-	@media ${Breakpoint.md} {
+	@media ${Breakpoint.lg} {
 		margin-bottom: 6rem;
 		padding-right: 8rem;
 	}

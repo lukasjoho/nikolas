@@ -24,15 +24,14 @@ const GlobalStyle = createGlobalStyle`
 
 		body{
 			padding-bottom: 8rem;
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 			color: #9EAEB0;	
 			overflow-x: hidden;
 			@media ${Breakpoint.md} {
 			overflow-x: unset;
 
 					font-size: 2rem;
-
-	}
+			}
 
 			
 		}

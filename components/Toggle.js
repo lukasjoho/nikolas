@@ -14,6 +14,7 @@ const Ul = styled.ul`
 	li {
 		padding: 1rem 3rem;
 		position: relative;
+		cursor: pointer;
 	}
 `;
 const Active = styled(motion.div)`

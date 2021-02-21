@@ -30,19 +30,20 @@ const Ul = styled.ul`
 const Socials = () => {
 	return (
 		<Ul>
-			<ListItem icon={<FaMedium />} link='https://medium.com/' />
-			<ListItem icon={<FaLinkedin />} link='https://medium.com/' />
+			<ListItem icon={<FaMedium />} link='https://medium.com/@nik0411' />
+			<ListItem
+				icon={<FaLinkedin />}
+				link='https://www.linkedin.com/in/nikolas-schoneweg-bb12b8166/'
+			/>
 			<ListItem icon={<IoDocumentText />} link='https://medium.com/' />
 		</Ul>
 	);
 };
 const ListItem = ({ link, icon }) => {
 	return (
-		<Link href={link}>
-			<a>
-				<li>{icon}</li>
-			</a>
-		</Link>
+		<a href={link} target='_blank'>
+			<li>{icon}</li>
+		</a>
 	);
 };
 export default Socials;

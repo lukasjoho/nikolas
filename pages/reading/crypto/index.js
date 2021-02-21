@@ -40,6 +40,8 @@ const StyledListItem = styled.a`
 		}
 	}
 	&:hover {
+		color: #c7f1fd;
+		text-shadow: 0px 0px 2px #c7f1fd;
 		span {
 			opacity: 1;
 			margin-left: -2.5rem;

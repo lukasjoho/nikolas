@@ -4,6 +4,7 @@ import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 import Theme from '../components/theme/theme';
+import Cursor from '../components/Cursor';
 
 function MyApp({ Component, pageProps, router }) {
 	return (
