@@ -3,7 +3,7 @@ import Breakpoint from './_breakpoints';
 
 import styled from 'styled-components';
 import Socials from './Socials';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 const StyledHeader = styled.nav`
 	display: flex;
