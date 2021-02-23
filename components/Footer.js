@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
+import Socials from './Socials';
 import Breakpoint from './_breakpoints';
 
 const StyledFooter = styled.footer`
 	height: 80px;
-	position: fixed;
+	position: relative;
 	left: 0;
 	width: 100%;
 	bottom: 0px;
 	display: flex;
 	align-items: center;
-	background: rgba(2, 8, 23, 0.6);
-	backdrop-filter: blur(10px);
 	z-index: 999;
-	box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.6);
+	justify-content: center;
+	border-top: 1px solid #9eaeb020;
 	@media ${Breakpoint.lg} {
 		display: none;
 	}
@@ -22,7 +22,8 @@ const StyledFooter = styled.footer`
 const Footer = () => {
 	return (
 		<StyledFooter>
-			<Navbar />
+			{/* <Navbar /> */}
+			<Socials />
 		</StyledFooter>
 	);
 };

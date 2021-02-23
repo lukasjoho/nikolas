@@ -10,6 +10,13 @@ export const Container = styled.div`
 	padding: 0 4rem;
 	display: flex;
 	flex-direction: column;
+	padding-top: 11rem;
+	@media ${Breakpoint.md} {
+		padding-top: 14rem;
+	}
+	@media ${Breakpoint.lg} {
+		padding-top: 0rem;
+	}
 	@media ${Breakpoint.xl} {
 		max-width: 1100px;
 	}

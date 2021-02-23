@@ -8,16 +8,27 @@ import Navbar from './Navbar';
 const StyledHeader = styled.nav`
 	display: flex;
 	height: 8rem;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-end;
-	> *:last-child {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+
+	> *:first-child {
 		display: none;
 	}
 	@media ${Breakpoint.lg} {
+		align-items: center;
+
+		position: relative;
+		left: unset;
+		width: unset;
 		height: 16rem;
 		justify-content: space-between;
 		margin-bottom: 6rem;
-		> *:last-child {
+		> *:first-child {
 			display: flex;
 		}
 	}
