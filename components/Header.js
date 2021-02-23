@@ -4,7 +4,7 @@ import Breakpoint from './_breakpoints';
 import styled from 'styled-components';
 import Socials from './Socials';
 import Navbar from './Navbar';
-
+//changed Navbar capitalized
 const StyledHeader = styled.nav`
 	display: flex;
 	height: 8rem;
