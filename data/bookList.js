@@ -54,7 +54,7 @@ export const bookList = [
 		text:
 			'Did you know how fucked we humans actually are? Sorry for the expression but heck we are. If you still think you can hang out on the Fiji Islands in 2052 you might want to read this book and get some insights of what climate change actually means and that its not just some far away reality. ',
 		image:
-			'https://lh3.googleusercontent.com/proxy/ok1MSSGVTwMhXvTxwTqZbBsAiLG6bDF-r81cyPeY2jPaj0Rez2MZQD7FV429o4VJfyBL5slxjbFrNn28mIevBR5OpmZo5x2qI-0thidgb8Qx_Kv3pKp9su0GsqY',
+			'https://lh3.googleusercontent.com/proxy/w-1K9HHa7pQV_VSdYIpoBBzKIZ4s5WPgLu7G7KxcyK34G9tzMpSChcR9C3RAZKTUtRWRZYC-CYbs4XGySXQT-iJV8q_qacx9zecZsoc_mIFwFMjanyPX6hnJ8nM',
 	},
 	{
 		slug: 'how-i-like-to-work',

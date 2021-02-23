@@ -9,12 +9,22 @@ const Ul = styled.ul`
 	display: inline-flex;
 	list-style-type: none;
 	padding: 0;
-	margin-bottom: 6rem;
+	margin-bottom: 4rem;
+	margin-top: 5rem;
+	margin-left: -2rem;
 	/* margin-left: -3rem; */
+
+	@media ${Breakpoint.lg} {
+		margin-left: 0rem;
+		margin-top: 0rem;
+	}
 	li {
-		padding: 1rem 3rem;
+		padding: 1rem 2rem;
 		position: relative;
 		cursor: pointer;
+		@media ${Breakpoint.lg} {
+			padding: 1rem 3rem;
+		}
 	}
 `;
 const Active = styled(motion.div)`

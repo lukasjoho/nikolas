@@ -19,6 +19,7 @@ const Layout = ({
 	key,
 	link,
 	external,
+	toaster,
 }) => {
 	const router = useRouter();
 
@@ -43,12 +44,19 @@ const Layout = ({
 								className='desktop'
 								link={link}
 								external={external}
+								toaster={toaster}
 							/>
 						</div>
 					</Col>
 					<Col>
 						{children}
-						<Button text={textButton} mobile link={link} external={external} />
+						<Button
+							text={textButton}
+							mobile
+							link={link}
+							external={external}
+							toaster={toaster}
+						/>
 					</Col>
 				</Row>
 

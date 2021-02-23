@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Breakpoint from './_breakpoints';
 import Link from 'next/link';
-
+import toast, { Toaster } from 'react-hot-toast';
 const StyledButton = styled(motion.button)`
 	padding: 2rem 5rem;
 	background-color: transparent;
@@ -40,7 +40,7 @@ const spring = {
 	damping: 30,
 };
 
-const Button = ({ text, layoutId, key, mobile, link, external }) => {
+const Button = ({ text, layoutId, key, mobile, link, external, toaster }) => {
 	return (
 		<>
 			{link ? (
@@ -65,6 +65,15 @@ const Button = ({ text, layoutId, key, mobile, link, external }) => {
 						{text}
 					</StyledButton>
 				</a>
+			) : toaster ? (
+				<StyledButton
+					key={key}
+					layoutId={layoutId}
+					className={mobile ? 'full' : 'desktop'}
+					onClick={toaster}
+				>
+					{text}
+				</StyledButton>
 			) : (
 				<StyledButton
 					key={key}

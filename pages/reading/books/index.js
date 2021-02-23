@@ -6,7 +6,8 @@ import Toggle from '../../../components/Toggle';
 import Link from 'next/link';
 import { bookList } from '../../../data/bookList';
 import Breakpoint from '../../../components/_breakpoints';
-
+import toast, { Toaster } from 'react-hot-toast';
+import IconBook from '../../../public/icon-book-closed.svg';
 export const getStaticProps = async ({ params }) => {
 	return {
 		props: {
@@ -22,7 +23,15 @@ const Ul = styled.ul`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-left: -1rem;
-
+	@media ${Breakpoint.md} {
+		margin-left: -4rem;
+	}
+	@media ${Breakpoint.lg} {
+		margin-left: -2rem;
+	}
+	@media ${Breakpoint.xl} {
+		margin-left: -1rem;
+	}
 	li {
 		width: 33%;
 		margin-bottom: 4rem;
@@ -31,6 +40,7 @@ const Ul = styled.ul`
 		@media ${Breakpoint.md} {
 			margin-bottom: 6rem;
 		}
+
 		cursor: pointer;
 		&:hover {
 			opacity: 1;
@@ -40,10 +50,16 @@ const Ul = styled.ul`
 			@media ${Breakpoint.md} {
 				padding: 0 4rem;
 			}
+			@media ${Breakpoint.lg} {
+				padding: 0 2rem;
+			}
+			@media ${Breakpoint.xl} {
+				padding: 0 4rem;
+			}
 			height: 100%;
 			display: flex;
 			justify-content: center;
-			align-items: flex-start;
+			align-items: center;
 
 			img {
 				border-radius: 1rem;
@@ -57,10 +73,16 @@ const item = {
 	hidden: { opacity: 0, y: -100 },
 	show: { opacity: 1, y: 0 },
 };
+
 const ReadingPage = ({ books }) => {
+	const notify = () => toast('Pop a book of the shelf!');
+
 	const list = books.map((book) => (
-		<Link href={`books/${book.slug}`}>
-			<li>
+		<Link
+			href={`books/${book.slug}`}
+			onClick={() => console.log('link clicked')}
+		>
+			<li onClick={() => toast.dismiss()}>
 				<div>
 					<motion.img layoutId={book.slug} src={book.image}></motion.img>
 				</div>
@@ -82,9 +104,27 @@ const ReadingPage = ({ books }) => {
 				</>
 			}
 			textButton='Pick A Book'
+			toaster={notify}
 		>
 			<Toggle />
 			<Ul>{list}</Ul>
+			<Toaster
+				position='bottom-center'
+				toastOptions={{
+					// Define default options
+					className: '',
+					style: {
+						margin: '40px',
+						background: 'linear-gradient(259.25deg, #C7F1FD 0%, #DEF8FF 100%)',
+						color: '#020817',
+						zIndex: 999,
+						boxShadow: '0 0 5px 0px #C7F1FD',
+					},
+					duration: 1500,
+					icon: <IconBook />,
+					// Default options for specific types
+				}}
+			/>
 		</Layout>
 	);
 };
