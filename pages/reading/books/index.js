@@ -23,8 +23,10 @@ const Ul = styled.ul`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-left: -1rem;
+	margin-bottom: -4rem;
 	@media ${Breakpoint.md} {
 		margin-left: -4rem;
+		margin-bottom: -6rem;
 	}
 	@media ${Breakpoint.lg} {
 		margin-left: -2rem;

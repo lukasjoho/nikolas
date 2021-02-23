@@ -32,6 +32,11 @@ const GlobalStyle = createGlobalStyle`
 
 					font-size: 2rem;
 			}
+			@media ${Breakpoint.lg} {
+			overflow-x: unset;
+
+					padding-bottom: 6rem;
+			}
 
 			
 		}
