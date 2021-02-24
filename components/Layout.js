@@ -60,9 +60,11 @@ const Layout = ({
 							<Title layoutId='title'>{title}</Title>
 							<SuperTitle>{superTitle}</SuperTitle>
 							<Hr />
-							<BookContainer>
-								<motion.img layoutId={`${bookSlug}`} src={bookImage} alt='' />
-							</BookContainer>
+							{windowWidth < size.lg && (
+								<BookContainer>
+									<motion.img layoutId={`${bookSlug}`} src={bookImage} alt='' />
+								</BookContainer>
+							)}
 
 							<OverflowH>
 								<Paragraph>{text}</Paragraph>
