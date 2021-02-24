@@ -92,27 +92,9 @@ const item = {
 const CryptoPage = ({ cryptos }) => {
 	const list = cryptos.map((article) => <ListItem article={article} />);
 	return (
-		<Layout
-			title='Crypto'
-			superTitle='Disruptive'
-			text={
-				<>
-					To me reading is the greatest source of inspiration and knowledge.
-					Each book and every paper provides me with a new perspective and I
-					seek to evolve from learning about what other people have already
-					figured out. Check out my favorite books and the best research on
-					crypto
-				</>
-			}
-			textButton="Let's talk crypto"
-			external='https://www.linkedin.com/in/nikolas-schoneweg-bb12b8166/'
-		>
-			<Toggle />
-
-			<Ul variants={container} initial='hidden' animate='show'>
-				{list}
-			</Ul>
-		</Layout>
+		<Ul variants={container} initial='hidden' animate='show'>
+			{list}
+		</Ul>
 	);
 };
 export default CryptoPage;
