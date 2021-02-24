@@ -77,10 +77,10 @@ const Active = styled(motion.div)`
 const Navbar = () => {
 	return (
 		<Ul>
-			<NavItem text='Me' link='/'></NavItem>
-			<NavItem text='CoinIx' link='/coinix'></NavItem>
-			<NavItem text='Thesis' link='/thesis' />
-			<NavItem text='Reading' link='/reading/books' linkAlt='/reading/crypto' />
+			<NavItem text='about' link='/'></NavItem>
+			<NavItem text='coinIx' link='/coinix'></NavItem>
+			<NavItem text='thesis' link='/thesis' />
+			<NavItem text='reading' link='/reading/books' linkAlt='/reading/crypto' />
 		</Ul>
 	);
 };

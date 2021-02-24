@@ -226,11 +226,11 @@ const CircleAnimation = () => {
 						</div>
 
 						<div>
-							<img src='icon-thesis.svg' alt='' />
+							<img src='icon-bitcoin.svg' alt='' />
 						</div>
 
 						<div>
-							<img src='image-bnf.png' alt='' />
+							<img src='icon-bnf.png' alt='' />
 						</div>
 					</StyledCircle>
 				</CircleContainer>

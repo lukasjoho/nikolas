@@ -33,11 +33,11 @@ const StyledHeader = styled.nav`
 		}
 	}
 	@media ${Breakpoint.xl} {
-		height: 12rem;
+		height: 16rem;
 		margin-bottom: 6rem;
 	}
 	@media ${Breakpoint.xxl} {
-		height: 24rem;
+		height: 22rem;
 		margin-bottom: 6rem;
 	}
 `;

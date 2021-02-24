@@ -14,7 +14,7 @@ const Home = () => {
 					business development Currently exploring the world of
 				</>
 			}
-			textButton='Hit Me Up'
+			textButton='Get To Know Me'
 			external='https://www.linkedin.com/in/nikolas-schoneweg-bb12b8166/'
 		>
 			<CircleAnimation />

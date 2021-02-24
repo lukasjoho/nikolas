@@ -113,7 +113,7 @@ const Ul = styled(motion.ul)`
 			justify-content: center;
 			align-items: center;
 			transition: 0.3s ease;
-			filter: brightness(50%);
+			filter: brightness(80%);
 
 			&:hover {
 				filter: brightness(100%);
@@ -146,7 +146,11 @@ const BookItem = ({ book }) => {
 		<Link href={`books/${book.slug}`}>
 			<motion.li variants={bookitem} onClick={() => toast.dismiss()}>
 				<div>
-					<motion.img layoutId={book.slug} src={book.image} />
+					<motion.img
+						layoutId={book.slug}
+						src={book.image}
+						whileHover={{ scale: 0.9 }}
+					/>
 				</div>
 			</motion.li>
 		</Link>
