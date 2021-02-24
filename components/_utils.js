@@ -10,18 +10,19 @@ export const Container = styled.div`
 	padding: 0 4rem;
 	display: flex;
 	flex-direction: column;
-	padding-top: 11rem;
+	padding-top: 8rem;
+	margin-top: 3rem;
 	@media ${Breakpoint.md} {
-		padding-top: 14rem;
 	}
 	@media ${Breakpoint.lg} {
 		padding-top: 0rem;
+		margin-top: 0rem;
 	}
 	@media ${Breakpoint.xl} {
-		max-width: 1100px;
+		max-width: 1200px;
 	}
 	@media ${Breakpoint.xxl} {
-		max-width: 1250px;
+		max-width: 1400px;
 	}
 `;
 export const Row = styled.div`

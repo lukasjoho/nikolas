@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Breakpoint from './_breakpoints';
 
 const StyledParagraph = styled(motion.p)`
-	line-height: 2.2;
+	line-height: 2;
 	font-weight: 300;
 	overflow: scroll;
 	text-align: justify;
@@ -17,6 +17,8 @@ const StyledParagraph = styled(motion.p)`
 	}
 
 	@media ${Breakpoint.lg} {
+		line-height: 2.2;
+
 		&::-webkit-scrollbar {
 			all: unset;
 

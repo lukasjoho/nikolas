@@ -21,19 +21,24 @@ const StyledHeader = styled.nav`
 	}
 	@media ${Breakpoint.lg} {
 		align-items: center;
+		height: 12rem;
 
 		position: relative;
 		left: unset;
 		width: unset;
-		height: 16rem;
 		justify-content: space-between;
-		margin-bottom: 6rem;
+		margin-bottom: 3rem;
 		> *:first-child {
 			display: flex;
 		}
 	}
+	@media ${Breakpoint.xl} {
+		height: 12rem;
+		margin-bottom: 6rem;
+	}
 	@media ${Breakpoint.xxl} {
-		height: 20rem;
+		height: 24rem;
+		margin-bottom: 6rem;
 	}
 `;
 

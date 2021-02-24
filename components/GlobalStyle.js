@@ -21,24 +21,29 @@ const GlobalStyle = createGlobalStyle`
 	
 			overflow-x: hidden;
 
-
 		body{
 			/* padding-bottom: 8rem; */
 			font-size: 1.6rem;
 			color: #9EAEB0;	
 			overflow-x: hidden;
+		min-height: 100%;
+
 			@media ${Breakpoint.md} {
 			overflow-x: unset;
 
-					font-size: 2rem;
+					font-size: 1.8rem;
 			}
 			@media ${Breakpoint.lg} {
-			overflow-x: unset;
+					padding-bottom: 18rem;
 
-					padding-bottom: 6rem;
 			}
 
-			
+@media ${Breakpoint.xxl} {
+
+					font-size: 2rem;
+			}
+
+			overflow: hidden;
 		}
 
 		

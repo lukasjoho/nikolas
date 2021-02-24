@@ -29,11 +29,18 @@ const CircleWrapper = styled.div`
 		width: 110%;
 		padding-top: 110%;
 	}
+
 	@media ${Breakpoint.lg} {
 		top: -10%;
 
-		width: 120%;
-		padding-top: 120%;
+		width: 100%;
+		padding-top: 100%;
+	}
+	@media ${Breakpoint.xl} {
+		top: 0%;
+
+		width: 100%;
+		padding-top: 100%;
 	}
 	@media ${Breakpoint.xl} {
 		top: -20%;
@@ -72,7 +79,6 @@ const StyledCircle = styled.div`
 	transform: rotate(0deg);
 	animation: rotation ${(props) => `${props.duration}s`} linear
 		${(props) => `${-1 * props.delay}s`} infinite reverse;
-
 	div {
 		position: absolute;
 		width: ${(props) => `${props.icon / 1.5}px`};
@@ -148,9 +154,9 @@ const NoOverflow = styled.div`
 `;
 const Line = styled.div`
 	position: absolute;
-	height: 150px;
+	height: 300px;
 	width: 150%;
-	bottom: -150px;
+	bottom: -300px;
 	z-index: 3;
 	backdrop-filter: blur(10px);
 	.hr {
