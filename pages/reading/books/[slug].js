@@ -4,7 +4,8 @@ import React from 'react';
 import { bookList } from '../../../data/bookList';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import Breakpoint from '../../../components/_breakpoints';
+import Breakpoint, { size } from '../../../components/_breakpoints';
+import GetWindowDimensions from '../../../components/GetWindowDimensions';
 
 export const getStaticProps = async ({ params }) => {
 	const books = bookList.filter((book) => book.slug === params.slug);
@@ -28,11 +29,14 @@ export const getStaticPaths = async () => {
 };
 const Container = styled.div`
 	height: 100%;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
+	@media ${Breakpoint.lg} {
+		display: flex;
+	}
 	img {
-		width: 70%;
+		width: 60%;
 
 		border-radius: 2rem;
 		box-shadow: 0 2rem 4rem -1rem black;
@@ -42,6 +46,8 @@ const Container = styled.div`
 	}
 `;
 const Book = ({ book }) => {
+	const { windowWidth } = GetWindowDimensions();
+
 	return (
 		<Layout
 			title={book.tagline}
@@ -49,9 +55,13 @@ const Book = ({ book }) => {
 			text={book.text}
 			textButton='Back To All'
 			link='/reading/books'
+			bookImage={book.image}
+			bookSlug={book.slug}
 		>
 			<Container>
-				<motion.img layoutId={book.slug} src={book.image} alt='' />
+				{windowWidth >= size.lg && (
+					<motion.img layoutId={book.slug} src={book.image} alt='' />
+				)}
 			</Container>
 		</Layout>
 	);

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Button from '../components/Button';
+import { motion } from 'framer-motion';
 
 import Paragraph from '../components/Paragraph';
 import SuperTitle from '../components/SuperTitle';
@@ -9,6 +10,29 @@ import Title from '../components/Title';
 import { useRouter } from 'next/router';
 
 import { Container, Row, Col, OverflowH, Hr } from '../components/_utils';
+import styled from 'styled-components';
+import Breakpoint, { size } from '../components/_breakpoints';
+import GetWindowDimensions from './GetWindowDimensions';
+
+const BookContainer = styled.div`
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3rem;
+	@media ${Breakpoint.lg} {
+		display: none;
+	}
+	img {
+		width: 60%;
+
+		border-radius: 2rem;
+		box-shadow: 0 2rem 4rem -1rem black;
+		@media ${Breakpoint.md} {
+			width: 50%;
+		}
+	}
+`;
 
 const Layout = ({
 	title,
@@ -20,8 +44,11 @@ const Layout = ({
 	link,
 	external,
 	toaster,
+	bookImage,
+	bookSlug,
 }) => {
 	const router = useRouter();
+	const { windowWidth } = GetWindowDimensions();
 
 	return (
 		<>
@@ -33,6 +60,10 @@ const Layout = ({
 							<Title layoutId='title'>{title}</Title>
 							<SuperTitle>{superTitle}</SuperTitle>
 							<Hr />
+							<BookContainer>
+								<motion.img layoutId={`${bookSlug}`} src={bookImage} alt='' />
+							</BookContainer>
+
 							<OverflowH>
 								<Paragraph>{text}</Paragraph>
 							</OverflowH>

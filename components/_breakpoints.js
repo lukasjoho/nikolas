@@ -1,15 +1,15 @@
-const size = {
-	s: '576px',
-	md: '768px',
-	lg: '992px',
-	xl: '1200px',
-	xxl: '1400px',
+export const size = {
+	s: 576,
+	md: 768,
+	lg: 992,
+	xl: 1200,
+	xxl: 1400,
 };
 const Breakpoint = {
-	s: `(min-width: ${size.s})`,
-	md: `(min-width: ${size.md})`,
-	lg: `(min-width: ${size.lg})`,
-	xl: `(min-width: ${size.xl})`,
-	xxl: `(min-width: ${size.xxl})`,
+	s: `(min-width: ${size.s}px)`,
+	md: `(min-width: ${size.md}px)`,
+	lg: `(min-width: ${size.lg}px)`,
+	xl: `(min-width: ${size.xl}px)`,
+	xxl: `(min-width: ${size.xxl}px)`,
 };
 export default Breakpoint;
