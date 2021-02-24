@@ -19,7 +19,7 @@ const Animation = styled.div`
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
-		transform: scale(1.5);
+		transform: scale(1.3);
 		@media ${Breakpoint.md} {
 			transform: scale(2);
 		}
