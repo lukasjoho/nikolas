@@ -143,10 +143,13 @@ const StyledImage = styled(motion.div)`
 	z-index: 2;
 	img {
 		position: relative;
-		width: 100%;
+		width: 85%;
 		bottom: 0px;
 		margin: auto;
 		filter: brightness(85%);
+		@media ${Breakpoint.lg} {
+			width: 100%;
+		}
 	}
 `;
 const NoOverflow = styled.div`
