@@ -20,8 +20,15 @@ const Animation = styled.div`
 		display: flex;
 		justify-content: center;
 		transform: scale(1.3);
+		flex-direction: column;
+		align-items: center;
+
 		@media ${Breakpoint.md} {
 			transform: scale(2);
+		}
+		p {
+			font-size: 0.8rem;
+			opacity: 0.5;
 		}
 		iframe {
 			transform: scale(1);
@@ -33,7 +40,7 @@ const CoinIxPage = () => {
 	return (
 		<Layout
 			title='Cryptocurrency Fund'
-			superTitle='coinIX Capital'
+			superTitle='CoinIX Capital'
 			text={
 				<>
 					coinIX is one of Germanies largest and most successful crypto asset
@@ -51,15 +58,17 @@ const CoinIxPage = () => {
 			}
 			textButton='Visit CoinIx'
 			external='https://coinix.capital/'
+			tabTitle='coinIx'
 		>
 			<Animation>
 				<div>
 					<iframe
-						src='https://my.spline.design/coinixcopycopy-fb636eee2006a3f5f35949c92371eccb/'
+						src='https://my.spline.design/coinixcopycopycopy-e899aace6f17a233168f0461d4f13bc5/'
 						frameborder='0'
 						width='100%'
 						height='300px'
 					></iframe>
+					<p>Drag Me!</p>
 				</div>
 			</Animation>
 		</Layout>

@@ -20,6 +20,10 @@ export const getStaticProps = async ({ params }) => {
 		},
 	};
 };
+const Parent = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
 const StyledListItem = styled.a`
 	color: inherit;
 	text-decoration: none;
@@ -43,6 +47,7 @@ const StyledListItem = styled.a`
 			opacity: 0;
 			transition: 0.3s ease;
 			margin-left: -2rem;
+			z-index: 999;
 		}
 	}
 	&:hover {
@@ -62,10 +67,33 @@ const UlCrypto = styled(motion.ul)`
 	list-style-type: none;
 	padding-left: 0rem;
 	margin-bottom: -4rem;
-
+	overflow: scroll;
+	/* &::-webkit-scrollbar {
+		display: none;
+	}
 	@media ${Breakpoint.lg} {
 		padding-left: 3rem;
-	}
+		&::-webkit-scrollbar {
+			all: unset;
+
+			width: 0.5rem;
+			cursor: pointer;
+		}
+		&::-webkit-scrollbar-track {
+			background: rgba(39, 48, 61, 0.5);
+			border-radius: 0.25rem;
+			cursor: pointer;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: rgba(158, 174, 176, 0.5);
+			border-radius: 0.25rem;
+			cursor: pointer;
+			box-shadow: 0px 0px 10px 0px #c7f1fd;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: rgba(158, 174, 176, 1);
+		}
+	} */
 `;
 const Ul = styled(motion.ul)`
 	display: inline-flex;
@@ -75,6 +103,7 @@ const Ul = styled(motion.ul)`
 	flex-wrap: wrap;
 	margin-left: -1rem;
 	margin-bottom: -4rem;
+
 	@media ${Breakpoint.md} {
 		margin-left: -4rem;
 		margin-bottom: -6rem;
@@ -183,15 +212,6 @@ const ReadingPage = ({ books, cryptos }) => {
 		setToggle(e.target.id);
 		console.log(toggle);
 	};
-	// const listBooks = books.map((book) => (
-	// 	<Link href={`books/${book.slug}`}>
-	// 		<li onClick={() => toast.dismiss()}>
-	// 			<div>
-	// 				<motion.img layoutId={book.slug} src={book.image}></motion.img>
-	// 			</div>
-	// 		</li>
-	// 	</Link>
-	// ));
 	const listBooks = books.map((book) => <BookItem book={book} />);
 	const listCrypto = cryptos.map((article) => <ListItem article={article} />);
 
@@ -210,10 +230,9 @@ const ReadingPage = ({ books, cryptos }) => {
 					</>
 				) : (
 					<>
-						crypto crypto a crypto crypto a crypto crypto a crypto crypto a
-						crypto crypto a crypto crypto a crypto crypto a crypto crypto a
-						crypto crypto a crypto crypto acrypto crypto a crypto crypto a
-						crypto crypto a crypto crypto a crypto crypto a
+						I curated a list of the must reads on crypto. Take some time to read
+						the first 5 and you will fall down the rabbit whole to read the rest
+						of them.
 					</>
 				)
 			}
@@ -224,6 +243,7 @@ const ReadingPage = ({ books, cryptos }) => {
 					? 'https://www.linkedin.com/in/nikolas-schoneweg-bb12b8166/'
 					: null
 			}
+			tabTitle='Reading'
 		>
 			<Toggle toggle={toggle} toggleState={handleState} />
 			{toggle === 'books' ? (
@@ -236,7 +256,7 @@ const ReadingPage = ({ books, cryptos }) => {
 				</UlCrypto>
 			)}
 			<Toaster
-				position='bottom-center'
+				position='top-center'
 				toastOptions={{
 					// Define default options
 					className: '',

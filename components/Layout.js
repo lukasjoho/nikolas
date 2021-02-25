@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Button from '../components/Button';
 import { motion } from 'framer-motion';
-
+import Head from 'next/head';
 import Paragraph from '../components/Paragraph';
 import SuperTitle from '../components/SuperTitle';
 import Title from '../components/Title';
@@ -46,12 +46,16 @@ const Layout = ({
 	toaster,
 	bookImage,
 	bookSlug,
+	tabTitle,
 }) => {
 	const router = useRouter();
 	const { windowWidth } = GetWindowDimensions();
 
 	return (
 		<>
+			<Head>
+				<title>{tabTitle} - Nikolas</title>
+			</Head>
 			<Container>
 				<Header />
 				<Row>

@@ -57,6 +57,7 @@ const Book = ({ book }) => {
 			link='/reading'
 			bookImage={book.image}
 			bookSlug={book.slug}
+			tabTitle='Reading'
 		>
 			<Container>
 				{windowWidth >= size.lg && (

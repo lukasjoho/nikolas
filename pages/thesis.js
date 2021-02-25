@@ -16,6 +16,7 @@ const ThesisPage = () => {
 				</>
 			}
 			textButton='Get an excerpt'
+			tabTitle='My Thesis'
 		>
 			<Overlap />
 		</Layout>
