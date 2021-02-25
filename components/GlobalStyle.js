@@ -29,9 +29,10 @@ const GlobalStyle = createGlobalStyle`
 		min-height: 100%;
 
 			@media ${Breakpoint.md} {
-			overflow-x: unset;
 
 					font-size: 1.8rem;
+			overflow-x: hidden;
+
 			}
 			@media ${Breakpoint.lg} {
 					padding-bottom: 18rem;
