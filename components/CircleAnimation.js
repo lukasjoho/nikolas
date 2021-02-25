@@ -143,7 +143,7 @@ const StyledImage = styled(motion.div)`
 	z-index: 2;
 	img {
 		position: relative;
-		width: 80%;
+		width: 100%;
 		bottom: 0px;
 		margin: auto;
 		filter: brightness(85%);
@@ -222,7 +222,7 @@ const CircleAnimation = () => {
 							<img src='image-coinix.png' alt='' />
 						</div>
 						<div>
-							<img src='icon-lien.png' alt='' />
+							<img src='icon-earth.svg' alt='' />
 						</div>
 
 						<div>
@@ -230,7 +230,7 @@ const CircleAnimation = () => {
 						</div>
 
 						<div>
-							<img src='icon-bnf.png' alt='' />
+							<img src='icon-bfn.svg' alt='' />
 						</div>
 					</StyledCircle>
 				</CircleContainer>
