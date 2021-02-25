@@ -60,7 +60,7 @@ const Layout = ({
 							<Title layoutId='title'>{title}</Title>
 							<SuperTitle>{superTitle}</SuperTitle>
 							<Hr />
-							{windowWidth < size.lg && (
+							{windowWidth < size.lg && router.pathname == '/reading/[slug]' && (
 								<BookContainer>
 									<motion.img layoutId={`${bookSlug}`} src={bookImage} alt='' />
 								</BookContainer>

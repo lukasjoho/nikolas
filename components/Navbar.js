@@ -80,7 +80,7 @@ const Navbar = () => {
 			<NavItem text='about' link='/'></NavItem>
 			<NavItem text='coinIx' link='/coinix'></NavItem>
 			<NavItem text='thesis' link='/thesis' />
-			<NavItem text='reading' link='/reading/books' linkAlt='/reading/crypto' />
+			<NavItem text='reading' link='/reading' />
 		</Ul>
 	);
 };

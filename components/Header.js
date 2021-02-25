@@ -19,6 +19,7 @@ const StyledHeader = styled.nav`
 	> *:first-child {
 		display: none;
 	}
+
 	@media ${Breakpoint.lg} {
 		align-items: center;
 		height: 12rem;

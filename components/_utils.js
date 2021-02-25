@@ -13,6 +13,7 @@ export const Container = styled.div`
 	padding-top: 8rem;
 	margin-top: 3rem;
 	@media ${Breakpoint.md} {
+		margin-top: 6rem;
 	}
 	@media ${Breakpoint.lg} {
 		padding-top: 0rem;

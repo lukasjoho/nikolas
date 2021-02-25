@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import Layout from '../../../components/Layout';
-import Toggle from '../../../components/Toggle';
+import Layout from '../../components/Layout';
+import Toggle from '../../components/Toggle';
 import Link from 'next/link';
-import { bookList } from '../../../data/bookList';
-import { cryptoList } from '../../../data/cryptoList';
+import { bookList } from '../../data/bookList';
+import { cryptoList } from '../../data/cryptoList';
 
-import Breakpoint from '../../../components/_breakpoints';
+import Breakpoint from '../../components/_breakpoints';
 import toast, { Toaster } from 'react-hot-toast';
-import IconBook from '../../../public/icon-book-closed.svg';
+import IconBook from '../../public/icon-book-closed.svg';
 import React, { useState } from 'react';
 import { FaLink } from 'react-icons/fa';
 
@@ -143,7 +143,7 @@ const ListItem = ({ article }) => {
 };
 const BookItem = ({ book }) => {
 	return (
-		<Link href={`books/${book.slug}`}>
+		<Link href={`/reading/${book.slug}`}>
 			<motion.li variants={bookitem} onClick={() => toast.dismiss()}>
 				<div>
 					<motion.img

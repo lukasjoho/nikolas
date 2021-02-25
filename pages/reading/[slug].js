@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Layout from '../../../components/Layout';
+import Layout from '../../components/Layout';
 import React from 'react';
-import { bookList } from '../../../data/bookList';
+import { bookList } from '../../data/bookList';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import Breakpoint, { size } from '../../../components/_breakpoints';
-import GetWindowDimensions from '../../../components/GetWindowDimensions';
+import Breakpoint, { size } from '../../components/_breakpoints';
+import GetWindowDimensions from '../../components/GetWindowDimensions';
 
 export const getStaticProps = async ({ params }) => {
 	const books = bookList.filter((book) => book.slug === params.slug);
@@ -54,7 +54,7 @@ const Book = ({ book }) => {
 			superTitle={book.title}
 			text={book.text}
 			textButton='Back To All'
-			link='/reading/books'
+			link='/reading'
 			bookImage={book.image}
 			bookSlug={book.slug}
 		>
