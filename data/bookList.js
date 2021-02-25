@@ -53,8 +53,7 @@ export const bookList = [
 		title: '2052',
 		text:
 			'Did you know how fucked we humans actually are? Sorry for the expression but heck we are. If you still think you can hang out on the Fiji Islands in 2052 you might want to read this book and get some insights of what climate change actually means and that its not just some far away reality. ',
-		image:
-			'https://lh3.googleusercontent.com/proxy/7gVaMfInP4M_VSmD5XVPLIEIKWbQ5xC1UfJ0_CO5wIk2knxi8FZiZYr6o9HjKObfHniDif7AUlSQ1ohTZSLD0nQYFcj3L8VSynUM3GC1oNw9cyaxEHRc4vCRXBc',
+		image: 'https://images-na.ssl-images-amazon.com/images/I/61hhZc0fW3L.jpg',
 	},
 	{
 		slug: 'how-i-like-to-work',
