@@ -156,6 +156,10 @@ const Metric = styled(motion.div)`
 		top: 2rem;
 		left: 3rem;
 	}
+	@media ${Breakpoint.lg} {
+		top: 5rem;
+		left: 6rem;
+	}
 `;
 const ChartContainer = styled.div`
 	position: relative;
