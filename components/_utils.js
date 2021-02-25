@@ -18,6 +18,7 @@ export const Container = styled.div`
 	@media ${Breakpoint.lg} {
 		padding-top: 0rem;
 		margin-top: 0rem;
+		max-width: 1100px;
 	}
 	@media ${Breakpoint.xl} {
 		max-width: 1200px;
