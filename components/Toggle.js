@@ -4,7 +4,7 @@ import Breakpoint from './_breakpoints';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-const UlContainer = styled.div`
+const UlWrapper = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -17,9 +17,7 @@ const Ul = styled.ul`
 	list-style-type: none;
 	margin-bottom: 4rem;
 	margin-top: 5rem;
-	/* margin-left: -3rem; */
 	position: relative;
-	border-radius: 10px;
 
 	@media ${Breakpoint.lg} {
 		margin-left: 3rem;
@@ -53,7 +51,7 @@ const Active = styled(motion.div)`
 	margin-left: ${(props) => (props.toggle === 'books' ? '0%' : '50%')};
 `;
 
-const SuperLink = ({ text, toggleState, id }) => {
+const LinkStyled = ({ text, toggleState, id }) => {
 	return (
 		<li id={id} onClick={(e) => toggleState(e)}>
 			{text}
@@ -63,13 +61,13 @@ const SuperLink = ({ text, toggleState, id }) => {
 
 const Toggle = ({ toggle, toggleState }) => {
 	return (
-		<UlContainer>
+		<UlWrapper>
 			<Ul id='toggler'>
 				<Active toggle={toggle} />
-				<SuperLink id='books' text='Books' toggleState={toggleState} />
-				<SuperLink id='crypto' text='Crypto' toggleState={toggleState} />
+				<LinkStyled id='books' text='Books' toggleState={toggleState} />
+				<LinkStyled id='crypto' text='Crypto' toggleState={toggleState} />
 			</Ul>
-		</UlContainer>
+		</UlWrapper>
 	);
 };
 export default Toggle;

@@ -7,10 +7,11 @@ import { bookList } from '../../data/bookList';
 import { cryptoList } from '../../data/cryptoList';
 
 import Breakpoint from '../../components/_breakpoints';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import IconBook from '../../public/icon-book-closed.svg';
 import React, { useState } from 'react';
 import { FaLink } from 'react-icons/fa';
+import Toaster from '../../components/Toaster';
 
 export const getStaticProps = async ({ params }) => {
 	return {
@@ -20,10 +21,6 @@ export const getStaticProps = async ({ params }) => {
 		},
 	};
 };
-const Parent = styled.div`
-	display: flex;
-	flex-direction: column;
-`;
 const StyledListItem = styled.a`
 	color: inherit;
 	text-decoration: none;
@@ -62,38 +59,11 @@ const StyledListItem = styled.a`
 		}
 	}
 `;
-const gap = '1.2rem';
 const UlCrypto = styled(motion.ul)`
 	list-style-type: none;
 	padding-left: 0rem;
 	margin-bottom: -4rem;
 	overflow: scroll;
-	/* &::-webkit-scrollbar {
-		display: none;
-	}
-	@media ${Breakpoint.lg} {
-		padding-left: 3rem;
-		&::-webkit-scrollbar {
-			all: unset;
-
-			width: 0.5rem;
-			cursor: pointer;
-		}
-		&::-webkit-scrollbar-track {
-			background: rgba(39, 48, 61, 0.5);
-			border-radius: 0.25rem;
-			cursor: pointer;
-		}
-		&::-webkit-scrollbar-thumb {
-			background: rgba(158, 174, 176, 0.5);
-			border-radius: 0.25rem;
-			cursor: pointer;
-			box-shadow: 0px 0px 10px 0px #c7f1fd;
-		}
-		&::-webkit-scrollbar-thumb:hover {
-			background: rgba(158, 174, 176, 1);
-		}
-	} */
 `;
 const Ul = styled(motion.ul)`
 	display: inline-flex;
@@ -255,23 +225,8 @@ const ReadingPage = ({ books, cryptos }) => {
 					{listCrypto}
 				</UlCrypto>
 			)}
-			<Toaster
-				position='top-center'
-				toastOptions={{
-					// Define default options
-					className: '',
-					style: {
-						margin: '40px',
-						background: 'linear-gradient(259.25deg, #C7F1FD 0%, #DEF8FF 100%)',
-						color: '#020817',
-						zIndex: 999,
-						boxShadow: '0 0 5px 0px #C7F1FD',
-					},
-					duration: 1500,
-					icon: <IconBook />,
-					// Default options for specific types
-				}}
-			/>
+
+			<Toaster position='top-center' icon={<IconBook />} />
 		</Layout>
 	);
 };
