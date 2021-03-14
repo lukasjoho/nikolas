@@ -225,7 +225,7 @@ const CircleAnimation = () => {
 							<img src='image-coinix.png' alt='' />
 						</div>
 						<div>
-							<img src='icon-earth.svg' alt='' />
+							<img src='icon-earth.png' alt='' />
 						</div>
 
 						<div>

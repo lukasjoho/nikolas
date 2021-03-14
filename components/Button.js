@@ -30,6 +30,7 @@ const StyledButton = styled(motion.button)`
 		margin-bottom: 6rem;
 		width: 100%;
 		@media ${Breakpoint.lg} {
+			margin-top: 6rem;
 			display: none;
 		}
 	}

@@ -44,6 +44,9 @@ export const Row = styled.div`
 export const Col = styled.div`
 	flex-grow: 1;
 	padding: 0 4rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 	@media ${Breakpoint.lg} {
 		width: 50%;
 	}

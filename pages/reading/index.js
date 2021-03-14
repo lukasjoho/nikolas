@@ -26,7 +26,7 @@ const StyledListItem = styled.a`
 	text-decoration: none;
 
 	li {
-		margin-bottom: 4rem;
+		margin-bottom: 3.5rem;
 		display: flex;
 		align-items: center;
 
@@ -45,6 +45,10 @@ const StyledListItem = styled.a`
 			transition: 0.3s ease;
 			margin-left: -2rem;
 			z-index: 999;
+			@media ${Breakpoint.lg} {
+				position: relative;
+				margin-left: 0rem;
+			}
 		}
 	}
 	&:hover {
@@ -52,10 +56,16 @@ const StyledListItem = styled.a`
 		text-shadow: 0px 0px 2px #c7f1fd;
 		span {
 			opacity: 1;
-			margin-left: -2.5rem;
+			margin-left: -2rem;
+			@media ${Breakpoint.lg} {
+				margin-left: 1rem;
+			}
 		}
 		p {
 			margin-left: 0.5rem;
+			@media ${Breakpoint.lg} {
+				margin-left: 1rem;
+			}
 		}
 	}
 `;
@@ -63,8 +73,48 @@ const UlCrypto = styled(motion.ul)`
 	list-style-type: none;
 	padding-left: 0rem;
 	margin-bottom: -4rem;
-	overflow: scroll;
+
+	/* overflow: scroll; */
+	@media ${Breakpoint.lg} {
+		position: absolute;
+		padding-top: 2rem;
+	}
 `;
+const UlContainer = styled.div`
+	@media ${Breakpoint.lg} {
+		overflow-x: hidden;
+		overflow-y: scroll;
+		width: 100%;
+		position: relative;
+		flex-grow: 1;
+		width: calc(100% + 4rem);
+		margin-top: -2rem;
+
+		&::-webkit-scrollbar {
+			all: unset;
+
+			width: 0.5rem;
+
+			cursor: pointer;
+		}
+		&::-webkit-scrollbar-track {
+			background: rgba(39, 48, 61, 0.5);
+			border-radius: 0.25rem;
+			cursor: pointer;
+		}
+		&::-webkit-scrollbar-thumb {
+			/* background: #d9ddde; */
+			background: rgba(158, 174, 176, 0.5);
+			border-radius: 0.25rem;
+			cursor: pointer;
+			box-shadow: 0px 0px 10px 0px #c7f1fd;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: rgba(158, 174, 176, 1);
+		}
+	}
+`;
+
 const Ul = styled(motion.ul)`
 	display: inline-flex;
 	list-style-type: none;
@@ -72,17 +122,29 @@ const Ul = styled(motion.ul)`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-left: -1rem;
+	margin-right: -1rem;
 	margin-bottom: -4rem;
 
 	@media ${Breakpoint.md} {
 		margin-left: -4rem;
+		margin-right: -4rem;
+
 		margin-bottom: -6rem;
 	}
 	@media ${Breakpoint.lg} {
+		position: absolute;
+		top: 0;
+		left: 0;
 		margin-left: -2rem;
+		margin-right: -2rem;
+		padding-right: 4rem;
+		z-index: 999;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 	}
 	@media ${Breakpoint.xl} {
 		margin-left: -1rem;
+		margin-right: -3rem;
 	}
 	li {
 		width: 33%;
@@ -91,6 +153,13 @@ const Ul = styled(motion.ul)`
 		transition: 0.3s ease;
 		@media ${Breakpoint.md} {
 			margin-bottom: 6rem;
+		}
+		@media ${Breakpoint.lg} {
+			&:nth-last-child(2),
+			&:nth-last-child(1),
+			&:nth-last-child(3) {
+				margin-bottom: 0;
+			}
 		}
 		cursor: pointer;
 		&:hover {
@@ -105,6 +174,9 @@ const Ul = styled(motion.ul)`
 				padding: 0 2rem;
 			}
 			@media ${Breakpoint.xl} {
+				padding: 0 3rem;
+			}
+			@media ${Breakpoint.xxl} {
 				padding: 0 4rem;
 			}
 			height: 100%;
@@ -112,10 +184,11 @@ const Ul = styled(motion.ul)`
 			justify-content: center;
 			align-items: center;
 			transition: 0.3s ease;
-			filter: brightness(80%);
+			filter: brightness(75%);
 
 			&:hover {
 				filter: brightness(100%);
+				transform: scale(1.08);
 			}
 			img {
 				border-radius: 1rem;
@@ -145,11 +218,7 @@ const BookItem = ({ book }) => {
 		<Link href={`/reading/${book.slug}`}>
 			<motion.li variants={bookitem} onClick={() => toast.dismiss()}>
 				<div>
-					<motion.img
-						layoutId={book.slug}
-						src={book.image}
-						whileHover={{ scale: 0.9 }}
-					/>
+					<motion.img layoutId={book.slug} src={book.image} />
 				</div>
 			</motion.li>
 		</Link>
@@ -196,16 +265,19 @@ const ReadingPage = ({ books, cryptos }) => {
 						Each book and every paper provides me with a new perspective and I
 						seek to evolve from learning about what other people have already
 						figured out. Check out my favorite books and the best research on
-						crypto
+						crypto.
 					</>
 				) : (
 					<>
-						I curated a list of the must reads on crypto. Take some time to read
-						the first 5 and you will fall down the rabbit whole to read the rest
-						of them.
+						Crypto is arguably one of the fastest growing and most complicated
+						technologies we have ever had. Its hard to get a good foothold on
+						this thing let alone keep up with it. This is a list of the best
+						reading there is on the crypto space. Take some time to read a few
+						and you will fall down the rabbit whole to read the rest of them.
 					</>
 				)
 			}
+			fixed
 			textButton={toggle === 'books' ? 'Pick A Book' : "Let's Talk Crypto"}
 			toaster={notify}
 			link={
@@ -217,13 +289,17 @@ const ReadingPage = ({ books, cryptos }) => {
 		>
 			<Toggle toggle={toggle} toggleState={handleState} />
 			{toggle === 'books' ? (
-				<Ul variants={container} initial='hidden' animate='show'>
-					{listBooks}
-				</Ul>
+				<UlContainer>
+					<Ul variants={container} initial='hidden' animate='show'>
+						{listBooks}
+					</Ul>
+				</UlContainer>
 			) : (
-				<UlCrypto variants={container} initial='hidden' animate='show'>
-					{listCrypto}
-				</UlCrypto>
+				<UlContainer>
+					<UlCrypto variants={container} initial='hidden' animate='show'>
+						{listCrypto}
+					</UlCrypto>
+				</UlContainer>
 			)}
 
 			<Toaster position='top-center' icon={<IconBook />} />

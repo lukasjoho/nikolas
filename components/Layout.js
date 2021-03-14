@@ -47,6 +47,7 @@ const Layout = ({
 	bookImage,
 	bookSlug,
 	tabTitle,
+	fixed,
 }) => {
 	const router = useRouter();
 	const { windowWidth } = GetWindowDimensions();
@@ -71,7 +72,7 @@ const Layout = ({
 							)}
 
 							<OverflowH>
-								<Paragraph>{text}</Paragraph>
+								<Paragraph fixed>{text}</Paragraph>
 							</OverflowH>
 
 							<Button

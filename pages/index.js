@@ -14,9 +14,10 @@ const Home = () => {
 			superTitle='Discovering'
 			text={
 				<>
-					Currently exploring the world of cryptocurrencies.
-					<br /> Working on the bleeding edge between crypto finance and
-					business development Currently exploring the world of
+					I am currently exploring the world of cryptocurrencies and work on the
+					intersection between crypto products and business development. I stand
+					for change, progress and technology while my biggest interests lay in
+					climate change, innovation and brands.
 				</>
 			}
 			textButton='Get To Know Me'

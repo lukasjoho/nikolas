@@ -12,12 +12,19 @@ const StyledParagraph = styled(motion.p)`
 	overflow-y: scroll; */
 	overflow-x: hidden;
 	overflow-y: auto;
+	&.fixed {
+		height: auto;
+	}
 	&::-webkit-scrollbar {
 		display: none;
 	}
-
+	@media ${Breakpoint.md} {
+	}
 	@media ${Breakpoint.lg} {
-		line-height: 2.2;
+		line-height: 2;
+		&.fixed {
+			height: auto;
+		}
 
 		&::-webkit-scrollbar {
 			all: unset;
@@ -44,16 +51,20 @@ const StyledParagraph = styled(motion.p)`
 		/* padding-right: 8rem; */
 		padding-right: 4rem;
 		margin-right: 4rem;
-		max-height: 200px;
+		max-height: 18rem;
+	}
+	@media ${Breakpoint.xxl} {
+		max-height: 20rem;
 	}
 `;
 
-const Paragraph = ({ children, location, router }) => {
+const Paragraph = ({ children, location, router, fixed }) => {
 	return (
 		<StyledParagraph
 			initial={{ opacity: 0, y: -10 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ ease: 'easeOut', duration: 1 }}
+			className={fixed ? 'fixed' : null}
 		>
 			{children}
 		</StyledParagraph>

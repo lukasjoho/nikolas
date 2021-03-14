@@ -20,8 +20,14 @@ const Ul = styled.ul`
 	position: relative;
 
 	@media ${Breakpoint.lg} {
-		margin-left: 3rem;
+		margin-left: 0rem;
 		margin-top: 0rem;
+	}
+	@media ${Breakpoint.xl} {
+		margin-left: 2rem;
+	}
+	@media ${Breakpoint.xxl} {
+		margin-left: 3rem;
 	}
 	width: 20rem;
 

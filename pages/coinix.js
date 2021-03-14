@@ -46,14 +46,11 @@ const CoinIxPage = () => {
 					coinIX is one of Germanies largest and most successful crypto asset
 					managers. Our publicly listed stock offers exposure to crypto- and
 					blockchain markets and is backed by a carefully selected portfolio of
-					cryptocurrencies and seed investments. <br />
-					At coinIX I work on business development topics and assess new
-					investment opportunities. During my time here, we managed to overcome
-					the aftermaths of a sever hack, successfully performed a capital
-					increase and did very successful seed investments in projects such as
-					The Graph, 2KEY and Elrond. <br />
-					Feel free to contact for my opinion or me on crypto as an investment
-					opportunity
+					cryptocurrencies and seed investments. At coinIX I work on business
+					development topics and assess new investment opportunities. During my
+					time here, we managed to overcome the aftermaths of a severe hack,
+					successfully performed a capital increase and did very successful seed
+					investments in projects such as The Graph, 2KEY and Elrond.
 				</>
 			}
 			textButton='Visit CoinIx'
@@ -63,7 +60,8 @@ const CoinIxPage = () => {
 			<Animation>
 				<div>
 					<iframe
-						src='https://my.spline.design/coinixcopycopycopy-e899aace6f17a233168f0461d4f13bc5/'
+						// src='https://my.spline.design/coinixcopycopycopy-e899aace6f17a233168f0461d4f13bc5/'
+						src='animation.html'
 						frameborder='0'
 						width='100%'
 						height='300px'

@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				position: fixed;
+				background: rgba(115.89285714285715, 88.75, 255, 0);
+			}
+			canvas {
+				width: 100%;
+				height: 100%;
+				outline: none;
+			}
+			#container {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+		</style>
+		<title>Coin Ix - Copy - Copy</title>
+
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://spline.design/_assets/_images/icon_favicon16x16.png"
+			sizes="16x16"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://spline.design/_assets/_images/icon_favicon32x32.png"
+			sizes="32x32"
+		/>
+	</head>
+	<body>
+		<div id="container">
+			<canvas id="canvas3d"></canvas>
+		</div>
+
+		<script>
+			// Global namespace (backwards-compatibility)
+			var SPE = {};
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+		<script src="https://cdn.spline.design/lib/anime.min.js"></script>
+		<script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
+		<script>
+			var SPLINE_ASSETS_LIST = {
+				fonts: [],
+				images: [],
+				models: [],
+				animations: [],
+			};
+		</script>
+		<script>
+			var SPLINE_EXPORTED_SCENE = {
+				scenes: [{ nodes: [0] }],
+				nodes: [
+					{ children: [1, 2, 3, 4] },
+					{
+						spe_interaction: 0,
+						translation: [
+							-631.4145548913082,
+							-573.31832436641,
+							499.5104065385092,
+						],
+						rotation: [0, 0, 0.5, 0],
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1,
+							0,
+							0,
+							0,
+							0,
+							1,
+							0,
+							0,
+							-27.999999999999943,
+							0,
+							1,
+						],
+						uuid: '741DCCA7-6AE9-4E63-B492-D9DE06B78F3E',
+						visible: true,
+						extensions: { KHR_lights_punctual: { light: 0 } },
+					},
+					{
+						spe_empty_object: true,
+						spe_interaction: 1,
+						translation: [
+							48.09203501726141,
+							-41.56465099769518,
+							11.69670501843959,
+						],
+						rotation: [
+							-0.10133055893797134,
+							-0.2156808887021566,
+							-0.018353910827967175,
+							0.9710185405188129,
+						],
+						scale: [1.5000000000000002, 1.4999999999999998, 1.5],
+						hiddenMatrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+						visible: true,
+						uuid: 'DEBD9F31-EFDD-4710-897E-8D645D96AD5B',
+						children: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+					},
+					{
+						spe_interaction: 2,
+						camera: 0,
+						translation: [1.873117215e-315, -37.45156417290365, 1000],
+						rotation: [-3.197442310920451e-17, 9.3674e-319, 0, 1],
+						hiddenMatrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+						visible: true,
+						uuid: '3E9BA22D-7B30-4270-9F05-36AD87F49D99',
+						children: [15],
+					},
+					{ visible: true, extensions: { KHR_lights_punctual: { light: 1 } } },
+					{
+						mesh_spe: 0,
+						material: 0,
+						spe_interaction: 3,
+						translation: [0, -1.4210854715202004e-14, -4.5489344431916265],
+						rotation: [-0.7071067811865475, 0, 0, 0.7071067811865476],
+						scale: [1, 1, 1],
+						visible: false,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: 'CE532936-FD3C-4D7E-966F-19E3D6AA68F6',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 1,
+						material: 1,
+						spe_interaction: 4,
+						translation: [0, 1.4210854715202004e-14, 23.201065556808373],
+						rotation: [
+							-0.6644630243886749,
+							0.24184476264797547,
+							-0.24184476264797516,
+							0.6644630243886746,
+						],
+						scale: [0.9999999999999998, 1, 1],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1,
+							0,
+							0,
+							0,
+							0,
+							1,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: '228302B2-FCD0-4223-8AA4-C4B4DBD6A1F9',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 2,
+						material: 2,
+						spe_interaction: 5,
+						translation: [0, 1.4210854715202004e-14, 23.201065556808373],
+						rotation: [
+							-0.18301270189221916,
+							0.6830127018922195,
+							-0.6830127018922192,
+							0.18301270189221938,
+						],
+						scale: [1.0000000000000002, 1, 1],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: '437DC04F-4A79-474F-9B63-C8EE0C1E7EA7',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 3,
+						material: 3,
+						spe_interaction: 6,
+						translation: [
+							7.815970093361102e-14,
+							4.973799150320701e-13,
+							38.20106555680832,
+						],
+						rotation: [
+							-0.18301270189221916,
+							0.6830127018922196,
+							-0.6830127018922191,
+							0.18301270189221927,
+						],
+						scale: [1.2764705882352938, 1.2999999999999996, 1.2764705882352945],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: '412313CD-9BE8-4D70-87CA-FBB927B47BDD',
+						spe_cloner_data: {},
+						children: [16],
+					},
+					{
+						mesh_spe: 4,
+						material: 4,
+						spe_interaction: 7,
+						translation: [0, -2.120525977034049e-14, 10.235512626645573],
+						rotation: [-0.7071067811865475, 0, 0, 0.7071067811865476],
+						scale: [1, 1, 1],
+						visible: false,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: '7570F390-836F-40EF-8C49-19B964C07B64',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 5,
+						material: 5,
+						spe_interaction: 8,
+						translation: [0, 0, -26.768877286514602],
+						rotation: [0, 0, 0, 1],
+						scale: [1, 1, 1],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh2d',
+						uuid: '21B7BA03-3D24-446C-B431-21D51C173F37',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 6,
+						material: 6,
+						spe_interaction: 9,
+						translation: [
+							26.829723374823825,
+							-30.42742141190108,
+							56.099999999999994,
+						],
+						rotation: [0, 0, 0.25881904510252063, 0.9659258262890684],
+						scale: [1.0000000000000002, 1.0000000000000002, 4],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: '4D41F51A-2F9D-4AD5-B438-4595386A5D5C',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 7,
+						material: 7,
+						spe_interaction: 10,
+						translation: [
+							27.467056962359607,
+							23.999999999999943,
+							60.12240295345134,
+						],
+						rotation: [0, 0, -0.2588190451025207, 0.9659258262890684],
+						scale: [1.0000000000000002, 1.0000000000000002, 4],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: 'AF9224FC-9A87-4F17-9B47-D006848EE753',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 8,
+						material: 8,
+						spe_interaction: 11,
+						translation: [
+							-57.552727457074454,
+							-3.7732541562065336,
+							51.735444407503394,
+						],
+						rotation: [0, 0, 0, 1],
+						scale: [1.0000000000000002, 1.0000000000000002, 4],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							-38.65639017515733,
+							8.048106918761235,
+							-5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: '17D8DC75-395C-48B6-A1FC-31B3F8267879',
+						spe_cloner_data: {},
+					},
+					{
+						mesh_spe: 9,
+						material: 9,
+						spe_interaction: 12,
+						translation: [
+							-4.078318174986805,
+							9.40605403156411,
+							50.491170654870615,
+						],
+						rotation: [0, 0, -0.2588190451025207, 0.9659258262890683],
+						scale: [1.0000000000000002, 1.0000000000000002, 4],
+						visible: false,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							1,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							0,
+							0,
+							0,
+							1.0000000000000002,
+							0,
+							38.6563901751573,
+							-9.548106918761164,
+							5.593289091726973,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: '96D9ABA4-A269-46D7-9BC3-D9BD91343B22',
+						spe_cloner_data: {},
+					},
+					{
+						spe_interaction: null,
+						translation: [850000, 1300000, 1000000],
+						rotation: [0, 0, 0.5, 0],
+						hiddenMatrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+						uuid: 'FBA5F3BC-8223-4422-ADCC-50E80DE5BF4C',
+						visible: false,
+						extensions: { KHR_lights_punctual: { light: 2 } },
+					},
+					{
+						mesh_spe: 10,
+						material: 10,
+						spe_interaction: 13,
+						translation: [
+							7.815970093361102e-14,
+							4.973799150320701e-13,
+							38.20106555680833,
+						],
+						rotation: [
+							-0.1830127018922192,
+							0.6830127018922196,
+							-0.6830127018922191,
+							0.18301270189221933,
+						],
+						scale: [1, 0.9999999999999999, 1.0000000000000002],
+						visible: true,
+						castShadow: true,
+						receiveShadow: true,
+						hiddenMatrix: [
+							-0.8660254037844389,
+							-8.35337061531442e-17,
+							0.49999999999999983,
+							0,
+							-0.49999999999999994,
+							9.773518916706424e-16,
+							-0.8660254037844387,
+							0,
+							-3.6454102503901017e-16,
+							-1.0000000000000002,
+							-6.869147280420619e-16,
+							0,
+							3.3030409967239776e-13,
+							38.20106555680834,
+							4.1790466584098485e-13,
+							1,
+						],
+						type: 'mesh3d',
+						uuid: 'FE312DE0-9DE4-47F8-89C4-C73C701FA87C',
+						spe_cloner_data: {},
+					},
+				],
+				meshes: [],
+				meshes_spe: [
+					{
+						type: 'CylinderGeometry',
+						parameters: {
+							width: 114,
+							height: 114,
+							depth: 114,
+							radiusTop: 57,
+							radiusBottom: 57,
+							radialSegments: 64,
+							heightSegments: 1,
+							openEnded: false,
+							thetaLength: 360,
+							cornerRadius: 9,
+							cornerSegments: 8,
+							hollow: 0,
+						},
+					},
+					{
+						type: 'CylinderGeometry',
+						parameters: {
+							width: 253,
+							height: 30,
+							depth: 253,
+							radiusTop: 126.5,
+							radiusBottom: 126.5,
+							radialSegments: 64,
+							heightSegments: 1,
+							openEnded: false,
+							thetaLength: 110,
+							cornerRadius: 9,
+							cornerSegments: 8,
+							hollow: 0,
+						},
+					},
+					{
+						type: 'CylinderGeometry',
+						parameters: {
+							width: 253,
+							height: 30,
+							depth: 253,
+							radiusTop: 126.5,
+							radiusBottom: 126.5,
+							radialSegments: 64,
+							heightSegments: 1,
+							openEnded: false,
+							thetaLength: 250,
+							cornerRadius: 9,
+							cornerSegments: 8,
+							hollow: 0,
+						},
+					},
+					{
+						type: 'CylinderGeometry',
+						parameters: {
+							width: 170,
+							height: 20,
+							depth: 170,
+							radiusTop: 85,
+							radiusBottom: 85,
+							radialSegments: 64,
+							heightSegments: 1,
+							openEnded: false,
+							thetaLength: 360,
+							cornerRadius: 4,
+							cornerSegments: 1,
+							hollow: 0.86,
+						},
+					},
+					{
+						type: 'CylinderGeometry',
+						parameters: {
+							width: 118,
+							height: 125,
+							depth: 118,
+							radiusTop: 59,
+							radiusBottom: 59,
+							radialSegments: 64,
+							heightSegments: 1,
+							openEnded: false,
+							thetaLength: 360,
+							cornerRadius: 128,
+							cornerSegments: 24,
+							hollow: 0,
+						},
+					},
+					{
+						type: 'RectangleGeometry',
+						parameters: {
+							width: 255,
+							height: 255,
+							depth: 0,
+							cornerRadius: [50, 50, 50, 50],
+							cornerType: 1,
+							extrudeDepth: 24,
+							extrudeBevelSize: 12,
+							extrudeBevelSegments: 48,
+						},
+					},
+					{
+						type: 'CubeGeometry',
+						parameters: {
+							width: 18,
+							height: 179,
+							depth: 4,
+							widthSegments: 1,
+							heightSegments: 1,
+							depthSegments: 1,
+							cornerRadius: 0,
+							cornerSegments: 1,
+						},
+					},
+					{
+						type: 'CubeGeometry',
+						parameters: {
+							width: 18,
+							height: 179,
+							depth: 4,
+							widthSegments: 1,
+							heightSegments: 1,
+							depthSegments: 1,
+							cornerRadius: 0,
+							cornerSegments: 1,
+						},
+					},
+					{
+						type: 'CubeGeometry',
+						parameters: {
+							width: 18,
+							height: 103,
+							depth: 4,
+							widthSegments: 1,
+							heightSegments: 1,
+							depthSegments: 1,
+							cornerRadius: 0,
+							cornerSegments: 8,
+						},
+					},
+					{
+						type: 'CubeGeometry',
+						parameters: {
+							width: 18,
+							height: 188,
+							depth: 4,
+							widthSegments: 1,
+							heightSegments: 1,
+							depthSegments: 1,
+							cornerRadius: 0,
+							cornerSegments: 8,
+						},
+					},
+					{
+						type: 'CylinderGeometry',
+						parameters: {
+							width: 160,
+							height: 19,
+							depth: 160,
+							radiusTop: 80,
+							radiusBottom: 80,
+							radialSegments: 64,
+							heightSegments: 1,
+							openEnded: false,
+							thetaLength: 360,
+							cornerRadius: 0,
+							cornerSegments: 1,
+							hollow: 0,
+						},
+					},
+				],
+				materials: [
+					{
+						material_0_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [
+											0.9333333333333333,
+											0.7843137254901961,
+											0.7843137254901961,
+										],
+										diffuse: [
+											0.9333333333333333,
+											0.7843137254901961,
+											0.7843137254901961,
+										],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 15648968, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 3, type: 1 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_1_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [
+											0.6980392156862745,
+											0.6980392156862745,
+											0.6980392156862745,
+										],
+										diffuse: [
+											0.6980392156862745,
+											0.6980392156862745,
+											0.6980392156862745,
+										],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 85400, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 3, type: 1 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_2_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [
+											0.6980392156862745,
+											0.6980392156862745,
+											0.6980392156862745,
+										],
+										diffuse: [
+											0.6980392156862745,
+											0.6980392156862745,
+											0.6980392156862745,
+										],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 38359, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 3, type: 1 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_3_Lambert: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'LAMBERT',
+									values: {
+										ambient: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										diffuse: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 12965091, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 3, type: 1 },
+									},
+								},
+								{
+									type: 'fresnel',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										bias: { name: 'bias', value: 0.1, type: 2 },
+										scale: { name: 'scale', value: 1, type: 1 },
+										intensity: { name: 'intensity', value: 2, type: 1 },
+										factor: { name: 'factor', value: 1, type: 1 },
+										color: { name: 'color', value: 16777215, type: 6 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_4_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										diffuse: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 20,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 6325759, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 3, type: 1 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_5_Lambert: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'LAMBERT',
+									values: {
+										ambient: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										diffuse: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 12965091, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 3, type: 1 },
+									},
+								},
+								{
+									type: 'fresnel',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										bias: { name: 'bias', value: 0.1, type: 2 },
+										scale: { name: 'scale', value: 1, type: 1 },
+										intensity: { name: 'intensity', value: 2, type: 1 },
+										factor: { name: 'factor', value: 1, type: 1 },
+										color: { name: 'color', value: 16777215, type: 6 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_6_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [0.9058823529411765, 0.9529411764705882, 1],
+										diffuse: [0.9058823529411765, 0.9529411764705882, 1],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 15201279, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+									},
+								},
+								{
+									type: 'fresnel',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										bias: { name: 'bias', value: 0.1, type: 2 },
+										scale: { name: 'scale', value: 1, type: 1 },
+										intensity: { name: 'intensity', value: 2, type: 1 },
+										factor: { name: 'factor', value: 1, type: 1 },
+										color: { name: 'color', value: 16777215, type: 6 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_7_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [0.9058823529411765, 0.9529411764705882, 1],
+										diffuse: [0.9058823529411765, 0.9529411764705882, 1],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 15201279, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_8_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [
+											0.7725490196078432,
+											0.8313725490196079,
+											0.8901960784313725,
+										],
+										diffuse: [
+											0.7725490196078432,
+											0.8313725490196079,
+											0.8901960784313725,
+										],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 15201279, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+									},
+								},
+								{
+									type: 'fresnel',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										bias: { name: 'bias', value: 0.1, type: 2 },
+										scale: { name: 'scale', value: 1, type: 1 },
+										intensity: { name: 'intensity', value: 2, type: 1 },
+										factor: { name: 'factor', value: 1, type: 1 },
+										color: { name: 'color', value: 16777215, type: 6 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_9_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										diffuse: [
+											0.34901960784313724,
+											0.34901960784313724,
+											0.34901960784313724,
+										],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 15201279, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+									},
+								},
+								{
+									type: 'fresnel',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										bias: { name: 'bias', value: 0.1, type: 2 },
+										scale: { name: 'scale', value: 1, type: 1 },
+										intensity: { name: 'intensity', value: 2, type: 1 },
+										factor: { name: 'factor', value: 1, type: 1 },
+										color: { name: 'color', value: 16777215, type: 6 },
+									},
+								},
+							],
+						},
+					},
+					{
+						material_10_Phong: {
+							extensions: {
+								KHR_materials_common: {
+									technique: 'PHONG',
+									values: {
+										ambient: [
+											0.6980392156862745,
+											0.6980392156862745,
+											0.6980392156862745,
+										],
+										diffuse: [
+											0.6980392156862745,
+											0.6980392156862745,
+											0.6980392156862745,
+										],
+										specular: [
+											0.06666666666666667,
+											0.06666666666666667,
+											0.06666666666666667,
+										],
+										shininess: 30,
+										emission: [0, 0, 0],
+										transparent: true,
+										transparency: 1,
+									},
+								},
+							},
+							spe_options: {
+								side: 0,
+								wireframe: false,
+								flatShading: false,
+								visible: true,
+							},
+							spe_layers: [
+								{
+									type: 'color',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 0, type: 1 },
+										color: { name: 'color', value: 85400, type: 6 },
+									},
+								},
+								{
+									type: 'light',
+									uniforms: {
+										alpha: { name: 'alpha', value: 1, type: 1 },
+										mode: { name: 'mode', value: 3, type: 1 },
+									},
+								},
+							],
+						},
+					},
+				],
+				cameras: [
+					{
+						type: 'Orthographic',
+						orthographic: { xmag: 300, ymag: 300, zfar: 100000, znear: -50000 },
+						spe_options: { zoom: 0.5 },
+					},
+				],
+				buffers: [],
+				bufferViews: [],
+				accessors: [],
+				extensions: {
+					KHR_lights_punctual: {
+						lights: [
+							{
+								type: 'directional',
+								name: 'Directional Light',
+								color: [1, 1, 1],
+								intensity: 0.75,
+								shadows: {
+									castShadow: true,
+									shadowmapViewRight: 1250,
+									shadowmapViewLeft: -1250,
+									shadowmapViewTop: 1250,
+									shadowmapViewBottom: -1250,
+									shadowmapViewNear: 1,
+									shadowmapViewFar: 2500,
+								},
+							},
+							{
+								type: 'hemispheric',
+								name: 'Default Ambient Light',
+								color: [
+									0.8274509803921568,
+									0.8274509803921568,
+									0.8274509803921568,
+								],
+								intensity: 0.75,
+							},
+							{
+								type: 'directional',
+								name: 'Default Directional Light',
+								color: [1, 1, 1],
+								intensity: 0.75,
+								shadows: {
+									castShadow: false,
+									shadowmapViewRight: 5,
+									shadowmapViewLeft: -5,
+									shadowmapViewTop: 5,
+									shadowmapViewBottom: -5,
+									shadowmapViewNear: 0.5,
+									shadowmapViewFar: 500,
+								},
+							},
+						],
+					},
+				},
+				spline: {
+					interactions: [
+						{ uuid: '4775728A-E23A-47A4-9D06-0520DA9A0CE9' },
+						{
+							uuid: '50F32203-BB30-44FF-9C21-A45264E6149F',
+							selectedState: 2,
+							states: [
+								'2DD477A4-8A2C-490A-AECE-BA99AE53A944',
+								'351626C6-6520-47B1-A001-6DC7FC807A08',
+								'B6274287-A39C-457E-A3F1-0348BA1947EB',
+							],
+							events: [
+								{
+									type: 7,
+									ui: { isCollapsed: false },
+									targets: [
+										{
+											easing: 4,
+											duration: 8000,
+											delay: 0,
+											cubicControls: [0.5, 0.05, 0.1, 0.3],
+											springParameters: {
+												mass: 1,
+												stiffness: 80,
+												damping: 10,
+												velocity: 0,
+											},
+											repeat: true,
+											cycle: true,
+											rewind: true,
+											object: 'DEBD9F31-EFDD-4710-897E-8D645D96AD5B',
+											state: 'B6274287-A39C-457E-A3F1-0348BA1947EB',
+										},
+									],
+								},
+							],
+						},
+						{ uuid: '575D5052-7F83-4CB4-85E8-82C47882E74C' },
+						{ uuid: '85086C56-D192-45C9-BF7C-C980106EF341' },
+						{ uuid: '98FE3501-79AB-4744-9A01-F68812E71445' },
+						{ uuid: 'E3E14AB8-5D56-4431-BEFE-38966CA5B411' },
+						{ uuid: '13C2A16E-5C19-4D1D-990B-52DE3E5E61DC' },
+						{ uuid: 'E2ABE22C-46EB-45EB-BA6D-BC7A31166989' },
+						{ uuid: '2CA4B8F4-1298-4BCA-9EBA-1571909A82F3' },
+						{ uuid: '7A72A2F4-EB29-465D-9EFE-55E607D88EB8' },
+						{ uuid: '6847FCE1-B24C-4DEB-ADA3-75DDBE6EDA69' },
+						{ uuid: '992E9E86-A58B-4D2D-9693-C76056A0A966' },
+						{
+							uuid: 'FEC221E0-2228-43D3-8659-48B0DE21A78C',
+							selectedState: 1,
+							states: [
+								'FC994BC9-1857-4010-ABEA-58EF7CBEF6C1',
+								'85BDAFED-1D1B-4CA2-B1BC-FB37F1960D04',
+							],
+						},
+						{ uuid: '42FCF361-0BE9-469B-8FFC-DEF2D4D30883' },
+					],
+					interactionStates: {
+						'2DD477A4-8A2C-490A-AECE-BA99AE53A944': {
+							uuid: '2DD477A4-8A2C-490A-AECE-BA99AE53A944',
+							name: 'Base State',
+							position: [
+								37.13451071034362,
+								-86.8865082140347,
+								-6.801446370910185,
+							],
+							rotation: [
+								0.17657009597857184,
+								0.157071663756709,
+								-0.0214229243182863,
+								'XYZ',
+							],
+							scale: [1.3, 1.3, 1.3000000000000003],
+							hiddenMatrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+						},
+						'351626C6-6520-47B1-A001-6DC7FC807A08': {
+							uuid: '351626C6-6520-47B1-A001-6DC7FC807A08',
+							name: 'State 1',
+							position: [
+								38.656390175157334,
+								-8.048106918761194,
+								5.593289091726962,
+							],
+							rotation: [
+								-0.2494300173537929,
+								-0.4244137155539072,
+								-0.10451418562267889,
+								'XYZ',
+							],
+							scale: [1.5, 1.5, 1],
+							hiddenMatrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+						},
+						'B6274287-A39C-457E-A3F1-0348BA1947EB': {
+							uuid: 'B6274287-A39C-457E-A3F1-0348BA1947EB',
+							name: 'State 2',
+							position: [
+								48.09203501726141,
+								-41.56465099769518,
+								11.69670501843959,
+							],
+							rotation: [
+								-0.22695375316979058,
+								-0.4280974095849937,
+								-0.08733656974436436,
+								'XYZ',
+							],
+							scale: [1.5000000000000002, 1.4999999999999998, 1.5],
+							hiddenMatrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+						},
+						'FC994BC9-1857-4010-ABEA-58EF7CBEF6C1': {
+							uuid: 'FC994BC9-1857-4010-ABEA-58EF7CBEF6C1',
+							name: 'Base State',
+							position: [
+								27.79347968543524,
+								26.9340594655513,
+								56.118916061728925,
+							],
+							rotation: [0, 0, -0.5235987755982987, 'XYZ'],
+							scale: [1.0000000000000002, 1.0000000000000002, 4],
+							hiddenMatrix: [
+								1,
+								0,
+								0,
+								0,
+								0,
+								1,
+								0,
+								0,
+								0,
+								0,
+								1,
+								0,
+								248.80597341952483,
+								188.01841745694787,
+								226.48073604765878,
+								1,
+							],
+							geometry: { width: 18, height: 188, depth: 4 },
+							material: {
+								layersList: [
+									{
+										id: 0,
+										type: 'color',
+										defines: {},
+										uniforms: {
+											f0_alpha: { value: 1 },
+											f0_mode: { value: 0 },
+											f0_color: { value: 15201279 },
+										},
+									},
+									{
+										id: 1,
+										type: 'light',
+										defines: {},
+										uniforms: { f1_alpha: { value: 1 }, f1_mode: { value: 0 } },
+									},
+									{
+										id: 2,
+										type: 'fresnel',
+										defines: { USE_LAYER_FRESNEL: '' },
+										uniforms: {
+											f2_alpha: { value: 1 },
+											f2_mode: { value: 0 },
+											f2_bias: { value: 0.1 },
+											f2_scale: { value: 1 },
+											f2_intensity: { value: 2 },
+											f2_factor: { value: 1 },
+											f2_color: { value: 16777215 },
+										},
+									},
+								],
+							},
+						},
+						'85BDAFED-1D1B-4CA2-B1BC-FB37F1960D04': {
+							uuid: '85BDAFED-1D1B-4CA2-B1BC-FB37F1960D04',
+							name: 'State 1',
+							position: [
+								-4.078318174986805,
+								9.40605403156411,
+								50.491170654870615,
+							],
+							rotation: [0, 0, -0.5235987755982987, 'XYZ'],
+							scale: [1.0000000000000002, 1.0000000000000002, 4],
+							hiddenMatrix: [
+								1,
+								0,
+								0,
+								0,
+								0,
+								1.0000000000000002,
+								0,
+								0,
+								0,
+								0,
+								1.0000000000000002,
+								0,
+								38.6563901751573,
+								-9.548106918761164,
+								5.593289091726973,
+								1,
+							],
+							geometry: { width: 18, height: 188, depth: 4 },
+							material: {
+								layersList: [
+									{
+										id: 0,
+										type: 'color',
+										defines: {},
+										uniforms: {
+											f0_alpha: { value: 1 },
+											f0_mode: { value: 0 },
+											f0_color: { value: 15201279 },
+										},
+									},
+									{
+										id: 1,
+										type: 'light',
+										defines: {},
+										uniforms: { f1_alpha: { value: 1 }, f1_mode: { value: 0 } },
+									},
+									{
+										id: 2,
+										type: 'fresnel',
+										defines: { USE_LAYER_FRESNEL: '' },
+										uniforms: {
+											f2_alpha: { value: 1 },
+											f2_mode: { value: 0 },
+											f2_bias: { value: 0.1 },
+											f2_scale: { value: 1 },
+											f2_intensity: { value: 2 },
+											f2_factor: { value: 1 },
+											f2_color: { value: 16777215 },
+										},
+									},
+								],
+							},
+						},
+					},
+					textures: {},
+					images: {},
+					mainCameraIndex: 3,
+					usePrimitives: true,
+					bgColor: [0.4544817927170869, 0.3480392156862745, 1],
+					bgAlpha: 0,
+					orbitDamped: true,
+					orbitTarget: [-3.5995e-319, -37.451564172903716, 0],
+					cameraType: 'Orthographic',
+					cameraRotate: true,
+					cameraPan: true,
+					cameraZoom: false,
+					viewMode: 2,
+					viewWidth: 300,
+					viewHeight: 300,
+					quality: 'default',
+					useOrbitControls: true,
+				},
+			};
+		</script>
+		<script>
+			var SPE_USES_PREVIEW_IMAGE = false;
+			const runtime = new SpeRuntime(SPLINE_EXPORTED_SCENE, SPLINE_ASSETS_LIST);
+			runtime.run();
+		</script>
+	</body>
+</html>

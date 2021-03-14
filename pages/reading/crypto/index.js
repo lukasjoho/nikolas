@@ -26,6 +26,8 @@ const StyledListItem = styled.a`
 		div {
 			p {
 				transition: 0.3s ease;
+				white-space: nowrap;
+				background: red;
 			}
 			p:last-child {
 				font-weight: 300;
