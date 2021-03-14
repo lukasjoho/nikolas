@@ -9,6 +9,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
+		"@fontsource/exo": "^4.2.2",
 		"@svgr/webpack": "^5.5.0",
 		"chart.js": "^2.9.4",
 		"framer-motion": "^3.3.0",

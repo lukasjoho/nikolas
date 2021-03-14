@@ -39,7 +39,7 @@ const StyledHeader = styled.nav`
 	}
 	@media ${Breakpoint.xxl} {
 		height: 22rem;
-		margin-bottom: 6rem;
+		margin-bottom: 3rem;
 	}
 `;
 

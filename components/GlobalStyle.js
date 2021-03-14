@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import Breakpoint from './_breakpoints';
-
+import '@fontsource/exo/100.css';
+import '@fontsource/exo/300.css';
+import '@fontsource/exo/400.css';
+import '@fontsource/exo/700.css';
+import '@fontsource/exo/500.css';
 const GlobalStyle = createGlobalStyle`
 
 	html{
@@ -8,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 		/* background: radial-gradient(100.94% 258.4% at 0% 100%, #0B2738 0%, #020817 59.71%); */
 		color: white;
 		
-		font-family: Exo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-family: "Exo", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		font-size: 62.5%;
 		min-height: 100%;
 		*{
@@ -49,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
 
 		
 	}
-	@font-face {
+	/* @font-face {
 			font-family: "Exo";
 			src: url("/fonts/Exo/Exo-Thin.ttf");
 			font-style: normal;
@@ -174,6 +178,6 @@ const GlobalStyle = createGlobalStyle`
 			font-style: italic;
 			font-weight: 900;
 			font-display: swap;
-		}
+		} */
 `;
 export default GlobalStyle;
