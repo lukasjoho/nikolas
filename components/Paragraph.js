@@ -7,7 +7,7 @@ const StyledParagraph = styled(motion.p)`
 	line-height: 2;
 	font-weight: 300;
 	overflow: scroll;
-	text-align: justify;
+	text-align: left;
 	/* overflow: -moz-scrollbars-vertical;
 	overflow-y: scroll; */
 	overflow-x: hidden;
@@ -51,10 +51,10 @@ const StyledParagraph = styled(motion.p)`
 		/* padding-right: 8rem; */
 		padding-right: 4rem;
 		margin-right: 4rem;
-		max-height: 18rem;
+		max-height: 21.6rem;
 	}
 	@media ${Breakpoint.xxl} {
-		max-height: 20rem;
+		max-height: 24rem;
 	}
 `;
 

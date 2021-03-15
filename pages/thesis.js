@@ -12,7 +12,7 @@ const ThesisPage = () => {
 					Disruptive Innovation. I developed an extensive framework that can
 					identify disruptive characteristics and applied it to several
 					cryptocurrencies. The results of this thesis let me to starting my
-					career in the space. (Grade: 1.3)
+					career in the space.
 				</>
 			}
 			textButton='Get an excerpt'

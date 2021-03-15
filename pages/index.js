@@ -10,8 +10,8 @@ const Home = () => {
 
 	return (
 		<Layout
-			title='I am Nicolas'
-			superTitle='Discovering'
+			title='I am Nikolas'
+			superTitle='Exploring'
 			text={
 				<>
 					I am currently exploring the world of cryptocurrencies and work on the
