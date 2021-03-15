@@ -1,23 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import Link from 'next/link';
-import styled, { ThemeContext } from 'styled-components';
+import styled from 'styled-components';
 import Breakpoint from './_breakpoints';
 
 import { FaLinkedin, FaMedium } from 'react-icons/fa';
-import { IoDocumentText } from 'react-icons/io5';
+import { FiShare } from 'react-icons/fi';
 
 const Ul = styled.ul`
 	display: flex;
 	list-style-type: none;
 	align-items: center;
-	a {
-		text-decoration: none;
-		color: inherit;
+	> * {
+		padding: 0 1rem;
 		opacity: 0.5;
 		transition: 0.3s ease;
 		font-size: 2.2rem;
-		padding: 0 1rem;
 
 		&:first-child {
 			padding-left: 0;
@@ -34,6 +31,10 @@ const Ul = styled.ul`
 			opacity: 1;
 		}
 	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
 `;
 
 const Socials = () => {
@@ -44,15 +45,21 @@ const Socials = () => {
 				icon={<FaLinkedin />}
 				link='https://www.linkedin.com/in/nikolas-schoneweg-bb12b8166/'
 			/>
-			<ListItem icon={<IoDocumentText />} link='https://medium.com/' />
+			<ListItem icon={<FiShare />} />
 		</Ul>
 	);
 };
 const ListItem = ({ link, icon }) => {
 	return (
-		<a href={link} target='_blank'>
-			<li>{icon}</li>
-		</a>
+		<>
+			{link ? (
+				<a href={link} target='_blank'>
+					<li>{icon}</li>
+				</a>
+			) : (
+				<li>{icon}</li>
+			)}
+		</>
 	);
 };
 export default Socials;
