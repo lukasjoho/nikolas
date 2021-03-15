@@ -39,12 +39,9 @@ const GlobalStyle = createGlobalStyle`
 
 			}
 			@media ${Breakpoint.lg} {
-					padding-bottom: 18rem;
-
+					padding-bottom: 12rem;
 			}
-
-@media ${Breakpoint.xxl} {
-
+			@media ${Breakpoint.xxl} {
 					font-size: 2rem;
 			}
 

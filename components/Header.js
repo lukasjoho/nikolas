@@ -35,7 +35,7 @@ const StyledHeader = styled.nav`
 	}
 	@media ${Breakpoint.xl} {
 		height: 16rem;
-		margin-bottom: 6rem;
+		margin-bottom: 3rem;
 	}
 	@media ${Breakpoint.xxl} {
 		height: 22rem;

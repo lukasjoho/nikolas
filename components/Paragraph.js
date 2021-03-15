@@ -47,7 +47,7 @@ const StyledParagraph = styled(motion.p)`
 		&::-webkit-scrollbar-thumb:hover {
 			background: rgba(158, 174, 176, 1);
 		}
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 		/* padding-right: 8rem; */
 		padding-right: 4rem;
 		margin-right: 4rem;
